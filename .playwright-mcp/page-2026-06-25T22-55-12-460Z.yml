@@ -1,0 +1,297 @@
+- generic [ref=e2]:
+  - navigation [ref=e3]:
+    - list [ref=e4]:
+      - listitem [ref=e5]:
+        - link [ref=e6] [cursor=pointer]:
+          - /url: "#"
+    - link [ref=e8] [cursor=pointer]:
+      - /url: /Admin
+    - list [ref=e10]:
+      - listitem
+      - listitem [ref=e11]:
+        - link "John Smith":
+          - /url: "#"
+      - listitem [ref=e12]:
+        - link "Logout" [ref=e13] [cursor=pointer]:
+          - /url: /logout
+      - listitem
+      - listitem [ref=e14]:
+        - link "Public store" [ref=e15] [cursor=pointer]:
+          - /url: /
+      - listitem [ref=e16]:
+        - link [ref=e17] [cursor=pointer]:
+          - /url: "#"
+  - complementary [ref=e19]:
+    - link "logo.png" [ref=e20] [cursor=pointer]:
+      - /url: /Admin
+      - img "logo.png" [ref=e21]
+    - navigation [ref=e23]:
+      - menu [ref=e24]:
+        - listitem [ref=e25]:
+          - link "Dashboard" [ref=e26] [cursor=pointer]:
+            - /url: /Admin
+            - paragraph [ref=e28]: Dashboard
+        - listitem [ref=e29]:
+          - link "Catalog" [ref=e30] [cursor=pointer]:
+            - /url: "#"
+            - paragraph [ref=e32]: Catalog
+          - list [ref=e34]:
+            - listitem [ref=e35]:
+              - link "Products" [ref=e36] [cursor=pointer]:
+                - /url: /Admin/Product/List
+                - paragraph [ref=e38]: Products
+            - listitem [ref=e39]:
+              - link "Categories" [ref=e40] [cursor=pointer]:
+                - /url: /Admin/Category/List
+                - paragraph [ref=e42]: Categories
+            - listitem [ref=e43]:
+              - link "Manufacturers" [ref=e44] [cursor=pointer]:
+                - /url: /Admin/Manufacturer/List
+                - paragraph [ref=e46]: Manufacturers
+            - listitem [ref=e47]:
+              - link "Product reviews" [ref=e48] [cursor=pointer]:
+                - /url: /Admin/ProductReview/List
+                - paragraph [ref=e50]: Product reviews
+            - listitem [ref=e51]:
+              - link "Product tags" [ref=e52] [cursor=pointer]:
+                - /url: /Admin/Product/ProductTags
+                - paragraph [ref=e54]: Product tags
+            - listitem [ref=e55]:
+              - link "Attributes" [ref=e56] [cursor=pointer]:
+                - /url: "#"
+                - paragraph [ref=e58]: Attributes
+            - listitem [ref=e60]:
+              - link "Price lists" [ref=e61] [cursor=pointer]:
+                - /url: /Admin/PriceList/List
+                - paragraph [ref=e63]: Price lists
+        - listitem [ref=e64]:
+          - link "Sales" [ref=e65] [cursor=pointer]:
+            - /url: "#"
+            - paragraph [ref=e67]: Sales
+        - listitem [ref=e69]:
+          - link "Customers" [ref=e70] [cursor=pointer]:
+            - /url: "#"
+            - paragraph [ref=e72]: Customers
+        - listitem [ref=e74]:
+          - link "Promotions" [ref=e75] [cursor=pointer]:
+            - /url: "#"
+            - paragraph [ref=e77]: Promotions
+        - listitem [ref=e79]:
+          - link "Content management" [ref=e80] [cursor=pointer]:
+            - /url: "#"
+            - paragraph [ref=e82]: Content management
+        - listitem [ref=e84]:
+          - link "Configuration" [ref=e85] [cursor=pointer]:
+            - /url: "#"
+            - paragraph [ref=e87]: Configuration
+        - listitem [ref=e89]:
+          - link "System" [ref=e90] [cursor=pointer]:
+            - /url: "#"
+            - paragraph [ref=e92]: System
+        - listitem [ref=e94]:
+          - link "Reports" [ref=e95] [cursor=pointer]:
+            - /url: "#"
+            - paragraph [ref=e97]: Reports
+        - listitem [ref=e99]:
+          - link "Help" [ref=e100] [cursor=pointer]:
+            - /url: "#"
+            - paragraph [ref=e102]: Help
+  - generic [ref=e105]:
+    - generic [ref=e106]:
+      - heading "Add a new product back to product list" [level=1] [ref=e107]:
+        - text: Add a new product
+        - link "back to product list" [ref=e110] [cursor=pointer]:
+          - /url: /Admin/Product/List
+      - generic [ref=e111]:
+        - button "Save" [ref=e112] [cursor=pointer]: Save
+        - button "Save and Continue Edit" [ref=e114] [cursor=pointer]: Save and Continue Edit
+    - generic:
+      - list
+    - generic [ref=e118]:
+      - generic [ref=e120]:
+        - generic [ref=e125] [cursor=pointer]:
+          - generic: Advanced Basic
+        - button "Settings" [ref=e127] [cursor=pointer]: Settings
+      - generic [ref=e129]:
+        - generic [ref=e131]:
+          - generic [ref=e132] [cursor=pointer]:
+            - generic [ref=e133]: Product info
+            - button [ref=e136]
+          - generic [ref=e138]:
+            - generic [ref=e139]:
+              - generic [ref=e140]:
+                - generic [ref=e141]:
+                  - generic [ref=e144]: Product name
+                  - generic [ref=e146]:
+                    - textbox "Product name" [ref=e147]
+                    - generic [ref=e148]: "*"
+                - generic [ref=e149]:
+                  - generic [ref=e152]: Short description
+                  - textbox "Short description" [ref=e154]
+                - generic [ref=e155]:
+                  - generic [ref=e158]: Full description
+                  - generic [ref=e160]:
+                    - toolbar [ref=e161]:
+                      - generic [ref=e162]:
+                        - button "Undo (CTRL+Z)" [ref=e163] [cursor=pointer]:
+                          - generic [ref=e164]: 
+                        - button "Redo (CTRL+Y)" [ref=e165] [cursor=pointer]:
+                          - generic [ref=e166]: 
+                      - button "Style" [ref=e169] [cursor=pointer]:
+                        - generic [ref=e170]: 
+                      - generic [ref=e171]:
+                        - button "Bold (CTRL+B)" [ref=e172] [cursor=pointer]:
+                          - generic [ref=e173]: 
+                        - button "Italic (CTRL+I)" [ref=e174] [cursor=pointer]:
+                          - generic [ref=e175]: 
+                        - button "Underline (CTRL+U)" [ref=e176] [cursor=pointer]:
+                          - generic [ref=e177]: 
+                        - button "Remove Font Style (CTRL+\\)" [ref=e178] [cursor=pointer]:
+                          - generic [ref=e179]: 
+                      - generic [ref=e181]:
+                        - button "Font Size" [ref=e182] [cursor=pointer]: "16"
+                        - text: 
+                      - generic [ref=e184]:
+                        - button "Recent Color" [ref=e185] [cursor=pointer]:
+                          - generic [ref=e186]: 
+                        - button "More Color" [ref=e187] [cursor=pointer]
+                      - generic [ref=e188]:
+                        - button "Unordered list (CTRL+SHIFT+NUM7)" [ref=e189] [cursor=pointer]:
+                          - generic [ref=e190]: 
+                        - button "Ordered list (CTRL+SHIFT+NUM8)" [ref=e191] [cursor=pointer]:
+                          - generic [ref=e192]: 
+                        - generic [ref=e193]:
+                          - button "Paragraph" [ref=e194] [cursor=pointer]:
+                            - generic [ref=e195]: 
+                          - text:      
+                      - button "Table" [ref=e198] [cursor=pointer]:
+                        - generic [ref=e199]: 
+                      - generic [ref=e200]:
+                        - button "Link (CTRL+K)" [ref=e201] [cursor=pointer]:
+                          - generic [ref=e202]: 
+                        - button "Insert image" [ref=e203] [cursor=pointer]
+                        - button "Video" [ref=e205] [cursor=pointer]:
+                          - generic [ref=e206]: 
+                        - button "Insert Horizontal Rule (CTRL+ENTER)" [ref=e207] [cursor=pointer]:
+                          - generic [ref=e208]: 
+                      - generic [ref=e209]:
+                        - button "Full Screen" [ref=e210] [cursor=pointer]:
+                          - generic [ref=e211]: 
+                        - button "Code View" [ref=e212] [cursor=pointer]:
+                          - generic [ref=e213]: 
+                        - button "Help" [ref=e214] [cursor=pointer]:
+                          - generic [ref=e215]: 
+                    - textbox [ref=e217]:
+                      - paragraph [ref=e218]
+                    - status
+                    - status [ref=e219]:
+                      - generic "Resize" [ref=e220]
+                    - text:     
+                    - tooltip "Underline (CTRL+U)" [ref=e224]:
+                      - generic [ref=e225]: Underline (CTRL+U)
+              - generic [ref=e226]:
+                - generic [ref=e229]: SKU
+                - textbox "SKU" [ref=e231]
+            - generic [ref=e232]:
+              - generic [ref=e235]: Categories
+              - generic [ref=e239]:
+                - listbox [ref=e240]:
+                  - option [ref=e241]: Computers
+                  - option [ref=e242]: Computers >> Desktops
+                  - option [ref=e243]: Computers >> Notebooks
+                  - option [ref=e244]: Computers >> Software
+                  - option [ref=e245]: Electronics
+                  - option [ref=e246]: Electronics >> Camera & photo
+                  - option [ref=e247]: Electronics >> Cell phones
+                  - option [ref=e248]: Electronics >> Others
+                  - option [ref=e249]: Apparel
+                  - option [ref=e250]: Apparel >> Shoes
+                  - option [ref=e251]: Apparel >> Clothing
+                  - option [ref=e252]: Apparel >> Accessories
+                  - option [ref=e253]: Digital downloads
+                  - option [ref=e254]: Books
+                  - option [ref=e255]: Jewelry
+                  - option [ref=e256]: Gift Cards
+                - combobox [ref=e259]:
+                  - list [ref=e260]:
+                    - listitem [ref=e261]:
+                      - searchbox [ref=e262]
+        - generic [ref=e264]:
+          - generic [ref=e265] [cursor=pointer]:
+            - generic [ref=e266]: Prices
+            - button [ref=e269]
+          - generic [ref=e271]:
+            - generic [ref=e272]:
+              - generic [ref=e275]: Price
+              - generic [ref=e277]:
+                - spinbutton "Price" [ref=e278]: "0"
+                - text: USD
+            - text: USD USD USD USD
+            - generic [ref=e279]:
+              - generic [ref=e280]:
+                - generic [ref=e283]: Tax exempt
+                - checkbox "Tax exempt" [ref=e285]
+              - generic [ref=e286]:
+                - generic [ref=e289]: Tax category
+                - generic [ref=e291]:
+                  - combobox [ref=e292]
+                  - combobox "[None]" [ref=e295] [cursor=pointer]:
+                    - textbox "[None]" [ref=e296]
+        - generic [ref=e298]:
+          - generic [ref=e299] [cursor=pointer]:
+            - generic [ref=e300]: Shipping
+            - button [ref=e303]
+          - generic [ref=e306]:
+            - generic [ref=e307]:
+              - generic [ref=e310]: Shipping enabled
+              - checkbox "Shipping enabled" [checked] [ref=e312]
+            - generic [ref=e313]:
+              - generic [ref=e314]:
+                - generic [ref=e317]: Weight
+                - generic [ref=e319]:
+                  - spinbutton "Weight" [ref=e320]: "0"
+                  - text: lb(s)
+              - generic [ref=e321]:
+                - generic [ref=e324]: Length
+                - generic [ref=e326]:
+                  - spinbutton "Length" [ref=e327]: "0"
+                  - text: inch(es)
+              - generic [ref=e328]:
+                - generic [ref=e331]: Width
+                - generic [ref=e333]:
+                  - spinbutton "Width" [ref=e334]: "0"
+                  - text: inch(es)
+              - generic [ref=e335]:
+                - generic [ref=e338]: Height
+                - generic [ref=e340]:
+                  - spinbutton "Height" [ref=e341]: "0"
+                  - text: inch(es)
+              - text: USD
+        - generic [ref=e343]:
+          - generic [ref=e344] [cursor=pointer]:
+            - generic [ref=e345]: Inventory
+            - button [ref=e348]
+          - generic [ref=e352]:
+            - generic [ref=e355]: Inventory method
+            - generic [ref=e357]:
+              - combobox [ref=e358]
+              - combobox "Don't track inventory" [ref=e361] [cursor=pointer]:
+                - textbox "Don't track inventory" [ref=e362]
+        - generic [ref=e364]:
+          - generic [ref=e365] [cursor=pointer]:
+            - generic [ref=e366]: Multimedia
+            - button [ref=e369]
+          - generic [ref=e373]: You need to save the product before you can upload pictures or videos for this product page.
+        - generic [ref=e376] [cursor=pointer]:
+          - generic [ref=e377]: Product attributes
+          - button [ref=e380]
+        - generic [ref=e384] [cursor=pointer]:
+          - generic [ref=e385]: Specification attributes
+          - button [ref=e388]
+  - generic [ref=e393]:
+    - generic [ref=e394]:
+      - text: Powered by
+      - link "nopCommerce" [ref=e395] [cursor=pointer]:
+        - /url: https://www.nopcommerce.com/?utm_source=admin-panel&utm_medium=footer&utm_campaign=admin-panel
+    - generic [ref=e396]: Thursday, June 25, 2026 11:55 PM
+    - generic [ref=e397]: nopCommerce version 5.00.0

@@ -1,0 +1,385 @@
+- generic [ref=e2]:
+  - navigation [ref=e3]:
+    - list [ref=e4]:
+      - listitem [ref=e5]:
+        - link [ref=e6] [cursor=pointer]:
+          - /url: "#"
+    - link [ref=e8] [cursor=pointer]:
+      - /url: /Admin
+    - list [ref=e10]:
+      - listitem
+      - listitem [ref=e11]:
+        - link "John Smith":
+          - /url: "#"
+      - listitem [ref=e12]:
+        - link "Logout" [ref=e13] [cursor=pointer]:
+          - /url: /logout
+      - listitem
+      - listitem [ref=e14]:
+        - link "Public store" [ref=e15] [cursor=pointer]:
+          - /url: /
+      - listitem [ref=e16]:
+        - link [ref=e17] [cursor=pointer]:
+          - /url: "#"
+  - complementary [ref=e19]:
+    - link "logo.png" [ref=e20] [cursor=pointer]:
+      - /url: /Admin
+      - img "logo.png" [ref=e21]
+    - navigation [ref=e23]:
+      - menu [ref=e24]:
+        - listitem [ref=e25]:
+          - link "Dashboard" [ref=e26] [cursor=pointer]:
+            - /url: /Admin
+            - paragraph [ref=e28]: Dashboard
+        - listitem [ref=e29]:
+          - link "Catalog" [ref=e30] [cursor=pointer]:
+            - /url: "#"
+            - paragraph [ref=e32]: Catalog
+        - listitem [ref=e34]:
+          - link "Sales" [ref=e35] [cursor=pointer]:
+            - /url: "#"
+            - paragraph [ref=e37]: Sales
+          - list [ref=e39]:
+            - listitem [ref=e40]:
+              - link "Orders" [ref=e41] [cursor=pointer]:
+                - /url: /Admin/Order/List
+                - paragraph [ref=e43]: Orders
+            - listitem [ref=e44]:
+              - link "Shipments" [ref=e45] [cursor=pointer]:
+                - /url: /Admin/Order/ShipmentList
+                - paragraph [ref=e47]: Shipments
+            - listitem [ref=e48]:
+              - link "Return requests" [ref=e49] [cursor=pointer]:
+                - /url: /Admin/ReturnRequest/List
+                - paragraph [ref=e51]: Return requests
+            - listitem [ref=e52]:
+              - link "Recurring payments" [ref=e53] [cursor=pointer]:
+                - /url: /Admin/RecurringPayment/List
+                - paragraph [ref=e55]: Recurring payments
+            - listitem [ref=e56]:
+              - link "Gift cards" [ref=e57] [cursor=pointer]:
+                - /url: /Admin/GiftCard/List
+                - paragraph [ref=e59]: Gift cards
+            - listitem [ref=e60]:
+              - link "Shopping carts and wishlists" [ref=e61] [cursor=pointer]:
+                - /url: /Admin/ShoppingCart/CurrentCarts
+                - paragraph [ref=e63]: Shopping carts and wishlists
+        - listitem [ref=e64]:
+          - link "Customers" [ref=e65] [cursor=pointer]:
+            - /url: "#"
+            - paragraph [ref=e67]: Customers
+        - listitem [ref=e69]:
+          - link "Promotions" [ref=e70] [cursor=pointer]:
+            - /url: "#"
+            - paragraph [ref=e72]: Promotions
+        - listitem [ref=e74]:
+          - link "Content management" [ref=e75] [cursor=pointer]:
+            - /url: "#"
+            - paragraph [ref=e77]: Content management
+        - listitem [ref=e79]:
+          - link "Configuration" [ref=e80] [cursor=pointer]:
+            - /url: "#"
+            - paragraph [ref=e82]: Configuration
+        - listitem [ref=e84]:
+          - link "System" [ref=e85] [cursor=pointer]:
+            - /url: "#"
+            - paragraph [ref=e87]: System
+        - listitem [ref=e89]:
+          - link "Reports" [ref=e90] [cursor=pointer]:
+            - /url: "#"
+            - paragraph [ref=e92]: Reports
+        - listitem [ref=e94]:
+          - link "Help" [ref=e95] [cursor=pointer]:
+            - /url: "#"
+            - paragraph [ref=e97]: Help
+  - generic [ref=e100]:
+    - generic [ref=e101]:
+      - heading "Edit order details - 3 back to order list" [level=1] [ref=e102]:
+        - text: Edit order details - 3
+        - link "back to order list" [ref=e105] [cursor=pointer]:
+          - /url: /Admin/Order/List
+      - generic [ref=e106]:
+        - link "Invoice (PDF)" [ref=e107] [cursor=pointer]:
+          - /url: /Admin/Order/PdfInvoice?orderId=3
+          - text: Invoice (PDF)
+        - generic [ref=e109] [cursor=pointer]: Delete
+    - generic:
+      - list
+    - generic [ref=e114]:
+      - generic [ref=e116]:
+        - generic [ref=e117] [cursor=pointer]:
+          - generic [ref=e118]: Info
+          - button [ref=e121]
+        - generic [ref=e123]:
+          - generic [ref=e125]:
+            - generic [ref=e126]:
+              - generic [ref=e129]: "Order #"
+              - generic [ref=e131]: "3"
+            - generic [ref=e132]:
+              - generic [ref=e135]: Created on
+              - generic [ref=e137]: 6/25/2026 5:33:25 PM
+            - generic [ref=e138]:
+              - generic [ref=e141]: Customer
+              - link "james_pan@nopCommerce.com" [ref=e143] [cursor=pointer]:
+                - /url: /Admin/Customer/Edit/6
+            - generic [ref=e144]:
+              - generic [ref=e147]: Order status
+              - generic [ref=e149]:
+                - generic [ref=e151]: Pending
+                - generic [ref=e152]:
+                  - button "Cancel order" [ref=e153] [cursor=pointer]
+                  - button "Change status" [ref=e154] [cursor=pointer]
+          - generic [ref=e156]:
+            - generic [ref=e157]:
+              - generic [ref=e160]: Order subtotal
+              - generic [ref=e164]:
+                - text: $8.80
+                - strong [ref=e165]: excl tax
+            - generic [ref=e166]:
+              - generic [ref=e169]: Order shipping
+              - generic [ref=e173]:
+                - text: $0.00
+                - strong [ref=e174]: excl tax
+            - generic [ref=e175]:
+              - generic [ref=e178]: Order tax
+              - generic [ref=e180]: $0.00
+            - generic [ref=e181]:
+              - generic [ref=e184]: Order total
+              - generic [ref=e186]: $8.80
+            - generic [ref=e187]:
+              - generic [ref=e190]: Profit
+              - generic [ref=e192]: $8.80
+            - button "Edit order totals" [ref=e195] [cursor=pointer]
+            - generic [ref=e196]:
+              - generic [ref=e199]: Payment method
+              - generic [ref=e201]: Payments.CheckMoneyOrder
+            - generic [ref=e202]:
+              - generic [ref=e205]: Payment status
+              - generic [ref=e207]: Pending
+            - button "Mark as paid" [ref=e210] [cursor=pointer]
+          - generic [ref=e212]:
+            - generic [ref=e213]:
+              - generic [ref=e216]: Store
+              - generic [ref=e218]: Your store name
+            - generic [ref=e219]:
+              - generic [ref=e222]: Order GUID
+              - generic [ref=e224]: c7cc0865-447c-42a7-aaf0-0a72b18326e4
+            - generic [ref=e225]:
+              - generic [ref=e228]: Customer IP address
+              - generic [ref=e230]: 127.0.0.1
+      - generic [ref=e232]:
+        - generic [ref=e233] [cursor=pointer]:
+          - generic [ref=e234]: Billing & shipping
+          - button [ref=e237]
+        - generic [ref=e240]:
+          - generic [ref=e242]:
+            - generic [ref=e243]: Billing address
+            - generic [ref=e244]:
+              - generic [ref=e245]:
+                - generic [ref=e248]: Full name
+                - generic [ref=e250]: James Pan
+              - generic [ref=e251]:
+                - generic [ref=e254]: Email
+                - generic [ref=e256]: james_pan@nopCommerce.com
+              - generic [ref=e257]:
+                - generic [ref=e260]: Phone
+                - generic [ref=e262]: "369258147"
+              - generic [ref=e266]: Fax
+              - generic [ref=e269]:
+                - generic [ref=e272]: Company
+                - generic [ref=e274]: Pan Company
+              - generic [ref=e275]:
+                - generic [ref=e278]: Address 1
+                - generic [ref=e280]: St Katharine's West 16
+              - generic [ref=e284]: Address 2
+              - generic [ref=e287]:
+                - generic [ref=e290]: City
+                - generic [ref=e292]: St Andrews
+              - generic [ref=e296]: County / region
+              - generic [ref=e302]: State / province
+              - generic [ref=e305]:
+                - generic [ref=e308]: Zip / postal code
+                - generic [ref=e310]: KY16 9AX
+              - generic [ref=e311]:
+                - generic [ref=e314]: Country
+                - generic [ref=e316]: United Kingdom of Great Britain and Northern Ireland
+            - link "Edit" [ref=e320] [cursor=pointer]:
+              - /url: /Admin/Order/AddressEdit?addressId=14&orderId=3
+          - generic [ref=e323]: Shipping not required
+      - generic [ref=e325]:
+        - generic [ref=e326] [cursor=pointer]:
+          - generic [ref=e327]: Products
+          - button [ref=e330]
+        - generic [ref=e332]:
+          - table [ref=e335]:
+            - rowgroup [ref=e345]:
+              - row "Picture Product name Downloadable product Price Quantity Discount Total Edit" [ref=e346]:
+                - columnheader "Picture" [ref=e347]
+                - columnheader "Product name" [ref=e348]
+                - columnheader "Downloadable product" [ref=e349]
+                - columnheader "Price" [ref=e350]
+                - columnheader "Quantity" [ref=e351]
+                - columnheader "Discount" [ref=e352]
+                - columnheader "Total" [ref=e353]
+                - columnheader "Edit" [ref=e354]
+            - rowgroup [ref=e355]:
+              - 'row "If You Wait (donation) SKU: IF_YOU_WT Number of downloads: 0 Reset License file (optional): Upload license file $3.00 excl tax 1 $0.00 excl tax $3.00 excl tax Edit Delete" [ref=e356]':
+                - cell [ref=e357]
+                - 'cell "If You Wait (donation) SKU: IF_YOU_WT" [ref=e358]':
+                  - emphasis [ref=e359]:
+                    - link "If You Wait (donation)" [ref=e360] [cursor=pointer]:
+                      - /url: /Admin/Product/Edit/46
+                  - paragraph [ref=e361]:
+                    - strong [ref=e362]: SKU
+                    - text: ": IF_YOU_WT"
+                - 'cell "Number of downloads: 0 Reset License file (optional): Upload license file" [ref=e363]':
+                  - generic [ref=e364]:
+                    - text: "Number of downloads: 0"
+                    - button "Reset" [ref=e365] [cursor=pointer]
+                    - separator [ref=e366]
+                  - generic [ref=e367]:
+                    - strong [ref=e369]: "License file (optional):"
+                    - button "Upload license file" [ref=e370] [cursor=pointer]
+                - cell "$3.00 excl tax" [ref=e371]
+                - cell "1" [ref=e372]:
+                  - generic [ref=e373]: "1"
+                - cell "$0.00 excl tax" [ref=e374]
+                - cell "$3.00 excl tax" [ref=e375]
+                - cell "Edit Delete" [ref=e376]:
+                  - button "Edit" [ref=e377] [cursor=pointer]: Edit
+                  - button "Delete" [ref=e379] [cursor=pointer]: Delete
+              - 'row "Night Visions SKU: NIGHT_VSN Number of downloads: 0 Reset License file (optional): Upload license file $2.80 excl tax 1 $0.00 excl tax $2.80 excl tax Edit Delete" [ref=e381]':
+                - cell [ref=e382]
+                - 'cell "Night Visions SKU: NIGHT_VSN" [ref=e383]':
+                  - emphasis [ref=e384]:
+                    - link "Night Visions" [ref=e385] [cursor=pointer]:
+                      - /url: /Admin/Product/Edit/45
+                  - paragraph [ref=e386]:
+                    - strong [ref=e387]: SKU
+                    - text: ": NIGHT_VSN"
+                - 'cell "Number of downloads: 0 Reset License file (optional): Upload license file" [ref=e388]':
+                  - generic [ref=e389]:
+                    - text: "Number of downloads: 0"
+                    - button "Reset" [ref=e390] [cursor=pointer]
+                    - separator [ref=e391]
+                  - generic [ref=e392]:
+                    - strong [ref=e394]: "License file (optional):"
+                    - button "Upload license file" [ref=e395] [cursor=pointer]
+                - cell "$2.80 excl tax" [ref=e396]
+                - cell "1" [ref=e397]:
+                  - generic [ref=e398]: "1"
+                - cell "$0.00 excl tax" [ref=e399]
+                - cell "$2.80 excl tax" [ref=e400]
+                - cell "Edit Delete" [ref=e401]:
+                  - button "Edit" [ref=e402] [cursor=pointer]: Edit
+                  - button "Delete" [ref=e404] [cursor=pointer]: Delete
+              - 'row "Science & Faith SKU: SCI_FAITH Number of downloads: 0 Reset License file (optional): Upload license file $3.00 excl tax 1 $0.00 excl tax $3.00 excl tax Edit Delete" [ref=e406]':
+                - cell [ref=e407]
+                - 'cell "Science & Faith SKU: SCI_FAITH" [ref=e408]':
+                  - emphasis [ref=e409]:
+                    - link "Science & Faith" [ref=e410] [cursor=pointer]:
+                      - /url: /Admin/Product/Edit/47
+                  - paragraph [ref=e411]:
+                    - strong [ref=e412]: SKU
+                    - text: ": SCI_FAITH"
+                - 'cell "Number of downloads: 0 Reset License file (optional): Upload license file" [ref=e413]':
+                  - generic [ref=e414]:
+                    - text: "Number of downloads: 0"
+                    - button "Reset" [ref=e415] [cursor=pointer]
+                    - separator [ref=e416]
+                  - generic [ref=e417]:
+                    - strong [ref=e419]: "License file (optional):"
+                    - button "Upload license file" [ref=e420] [cursor=pointer]
+                - cell "$3.00 excl tax" [ref=e421]
+                - cell "1" [ref=e422]:
+                  - generic [ref=e423]: "1"
+                - cell "$0.00 excl tax" [ref=e424]
+                - cell "$3.00 excl tax" [ref=e425]
+                - cell "Edit Delete" [ref=e426]:
+                  - button "Edit" [ref=e427] [cursor=pointer]: Edit
+                  - button "Delete" [ref=e429] [cursor=pointer]: Delete
+          - button "Add product" [ref=e433] [cursor=pointer]
+      - generic [ref=e435]:
+        - generic [ref=e436] [cursor=pointer]:
+          - generic [ref=e437]: Order notes
+          - button [ref=e440]
+        - generic [ref=e442]:
+          - generic [ref=e443]:
+            - generic [ref=e446]:
+              - table [ref=e449]:
+                - rowgroup [ref=e450]:
+                  - row "Created on Note Attached file Display to customer Delete" [ref=e451]:
+                    - columnheader "Created on" [ref=e452]
+                    - columnheader "Note" [ref=e453]
+                    - columnheader "Attached file" [ref=e454]
+                    - columnheader "Display to customer" [ref=e455]
+                    - columnheader "Delete" [ref=e456]
+              - table [ref=e464]:
+                - rowgroup:
+                  - row "Created on Note Attached file Display to customer Delete":
+                    - columnheader "Created on":
+                      - generic: Created on
+                    - columnheader "Note":
+                      - generic: Note
+                    - columnheader "Attached file":
+                      - generic: Attached file
+                    - columnheader "Display to customer":
+                      - generic: Display to customer
+                    - columnheader "Delete":
+                      - generic: Delete
+                - rowgroup [ref=e471]:
+                  - row "06/25/2026 5:33:25 PM Order placed No file attached Delete" [ref=e472]:
+                    - cell "06/25/2026 5:33:25 PM" [ref=e473]
+                    - cell "Order placed" [ref=e474]
+                    - cell "No file attached" [ref=e475]
+                    - cell [ref=e476]
+                    - cell "Delete" [ref=e478]:
+                      - link "Delete" [ref=e479] [cursor=pointer]:
+                        - /url: "#"
+                        - text: Delete
+              - generic:
+                - generic:
+                  - table
+            - generic [ref=e482]:
+              - navigation "pagination" [ref=e484]:
+                - list [ref=e485]:
+                  - listitem [ref=e486]:
+                    - generic "Previous"
+                  - listitem [ref=e487]:
+                    - link "1" [ref=e488] [cursor=pointer]:
+                      - /url: "#"
+                  - listitem [ref=e489]:
+                    - generic "Next"
+              - generic [ref=e491]:
+                - text: Show
+                - combobox "Show items" [ref=e492]:
+                  - option "7"
+                  - option "15" [selected]
+                  - option "20"
+                  - option "50"
+                  - option "100"
+                - text: items
+              - status [ref=e493]: 1-1 of 1 items
+              - button [ref=e495] [cursor=pointer]
+          - generic [ref=e498]:
+            - generic [ref=e499]: Add order note
+            - generic [ref=e500]:
+              - generic [ref=e501]:
+                - generic [ref=e504]: Note
+                - textbox "Note" [ref=e506]
+              - generic [ref=e507]:
+                - generic [ref=e510]: Attached file
+                - generic [ref=e513]:
+                  - checkbox "(check to upload file)" [ref=e514]
+                  - text: (check to upload file)
+              - generic [ref=e515]:
+                - generic [ref=e518]: Display to customer
+                - checkbox "Display to customer" [ref=e520]
+              - button "Add order note" [ref=e523] [cursor=pointer]
+  - generic [ref=e527]:
+    - generic [ref=e528]:
+      - text: Powered by
+      - link "nopCommerce" [ref=e529] [cursor=pointer]:
+        - /url: https://www.nopcommerce.com/?utm_source=admin-panel&utm_medium=footer&utm_campaign=admin-panel
+    - generic [ref=e530]: Friday, June 26, 2026 1:11 AM
+    - generic [ref=e531]: nopCommerce version 5.00.0

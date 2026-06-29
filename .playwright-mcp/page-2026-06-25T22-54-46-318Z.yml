@@ -1,0 +1,184 @@
+- generic [ref=e4]:
+  - navigation [ref=e5]:
+    - list [ref=e6]:
+      - listitem [ref=e7]:
+        - link [ref=e8] [cursor=pointer]:
+          - /url: "#"
+    - link [ref=e10] [cursor=pointer]:
+      - /url: /Admin
+    - list [ref=e12]:
+      - listitem
+      - listitem [ref=e13]:
+        - link "John Smith":
+          - /url: "#"
+      - listitem [ref=e14]:
+        - link "Logout" [ref=e15] [cursor=pointer]:
+          - /url: /logout
+      - listitem
+      - listitem [ref=e16]:
+        - link "Public store" [ref=e17] [cursor=pointer]:
+          - /url: /
+      - listitem [ref=e18]:
+        - link [ref=e19] [cursor=pointer]:
+          - /url: "#"
+  - complementary [ref=e21]:
+    - link "logo.png" [ref=e22] [cursor=pointer]:
+      - /url: /Admin
+      - img "logo.png" [ref=e23]
+    - navigation [ref=e25]:
+      - menu [ref=e26]:
+        - listitem [ref=e27]:
+          - link "Dashboard" [ref=e28] [cursor=pointer]:
+            - /url: /Admin
+            - paragraph [ref=e30]: Dashboard
+        - listitem [ref=e31]:
+          - link "Catalog" [ref=e32] [cursor=pointer]:
+            - /url: "#"
+            - paragraph [ref=e34]: Catalog
+        - listitem [ref=e36]:
+          - link "Sales" [ref=e37] [cursor=pointer]:
+            - /url: "#"
+            - paragraph [ref=e39]: Sales
+        - listitem [ref=e41]:
+          - link "Customers" [ref=e42] [cursor=pointer]:
+            - /url: "#"
+            - paragraph [ref=e44]: Customers
+        - listitem [ref=e46]:
+          - link "Promotions" [ref=e47] [cursor=pointer]:
+            - /url: "#"
+            - paragraph [ref=e49]: Promotions
+        - listitem [ref=e51]:
+          - link "Content management" [ref=e52] [cursor=pointer]:
+            - /url: "#"
+            - paragraph [ref=e54]: Content management
+        - listitem [ref=e56]:
+          - link "Configuration" [ref=e57] [cursor=pointer]:
+            - /url: "#"
+            - paragraph [ref=e59]: Configuration
+        - listitem [ref=e61]:
+          - link "System" [ref=e62] [cursor=pointer]:
+            - /url: "#"
+            - paragraph [ref=e64]: System
+        - listitem [ref=e66]:
+          - link "Reports" [ref=e67] [cursor=pointer]:
+            - /url: "#"
+            - paragraph [ref=e69]: Reports
+        - listitem [ref=e71]:
+          - link "Help" [ref=e72] [cursor=pointer]:
+            - /url: "#"
+            - paragraph [ref=e74]: Help
+  - generic [ref=e76]:
+    - heading "Dashboard" [level=1] [ref=e78]
+    - generic [ref=e83]:
+      - generic [ref=e86]:
+        - generic [ref=e87]:
+          - generic [ref=e88]: NopCommerce News
+          - button [ref=e91] [cursor=pointer]
+        - generic [ref=e94]:
+          - generic [ref=e96]:
+            - link "PayPal Commerce" [ref=e98] [cursor=pointer]:
+              - /url: https://www.nopcommerce.com/paypal-commerce-the-official-integration?utm_source=admin-panel&utm_medium=dashboard&utm_campaign=paypal
+            - generic [ref=e99]:
+              - text: PayPal Commerce delivers a complete payments platform with the global scale and flexibility your business needs to stay competitive.
+              - link "Download" [ref=e100] [cursor=pointer]:
+                - /url: https://www.nopcommerce.com/paypal-commerce-the-official-integration?utm_source=admin-panel&utm_medium=dashboard&utm_campaign=paypal
+              - text: the plugin.
+          - generic [ref=e102]:
+            - link "\"Powered by nopCommerce\" link" [ref=e104] [cursor=pointer]:
+              - /url: https://www.nopcommerce.com/nopcommerce-copyright-removal-key?utm_source=admin-panel&utm_medium=dashboard&utm_campaign=powered_by_nopcommerce
+            - generic [ref=e105]:
+              - text: Would you like to remove the "Powered by nopCommerce" link in the bottom of the footer? Click
+              - link "here" [ref=e106] [cursor=pointer]:
+                - /url: https://www.nopcommerce.com/nopcommerce-copyright-removal-key?utm_source=admin-panel&utm_medium=dashboard&utm_campaign=powered_by_nopcommerce
+              - text: for more info.
+          - generic [ref=e108]:
+            - link "Recommended hosting for your store" [ref=e110] [cursor=pointer]:
+              - /url: https://www.everleap.com/cloud-hosting/web-app/nopcommerce/hosting/?utm_source=NOPC&utm_medium=TXT&utm_content=PREMCP&utm_campaign=MIG30DYS
+            - generic [ref=e111]:
+              - text: Everleap cloud hosting seamlessly scales sites with ease and they move stores for free.
+              - link "Learn more" [ref=e112] [cursor=pointer]:
+                - /url: https://www.everleap.com/cloud-hosting/web-app/nopcommerce/hosting/?utm_source=NOPC&utm_medium=TXT&utm_content=PREMCP&utm_campaign=MIG30DYS
+              - text: and get a 30 day free trial.
+      - generic [ref=e115]:
+        - generic [ref=e116]:
+          - generic [ref=e117]: Common statistics
+          - button [ref=e120] [cursor=pointer]
+        - generic [ref=e123]:
+          - generic [ref=e125]:
+            - generic [ref=e126]:
+              - heading "5" [level=3] [ref=e127]
+              - paragraph [ref=e128]: Orders
+            - generic [ref=e129]: 
+            - link "More info" [ref=e130] [cursor=pointer]:
+              - /url: /Admin/Order/List
+              - text: More info
+          - generic [ref=e133]:
+            - generic [ref=e134]:
+              - heading "0" [level=3] [ref=e135]
+              - paragraph [ref=e136]: Pending return requests
+            - generic [ref=e137]: 
+            - link "More info" [ref=e138] [cursor=pointer]:
+              - /url: /Admin/ReturnRequest/List
+              - text: More info
+          - generic [ref=e141]:
+            - generic [ref=e142]:
+              - heading "6" [level=3] [ref=e143]
+              - paragraph [ref=e144]: Registered customers
+            - generic [ref=e145]: 
+            - link "More info" [ref=e146] [cursor=pointer]:
+              - /url: /Admin/Customer/List
+              - text: More info
+          - generic [ref=e149]:
+            - generic [ref=e150]:
+              - heading "1" [level=3] [ref=e151]
+              - paragraph [ref=e152]: Low stock products
+            - generic [ref=e153]: 
+            - link "More info" [ref=e154] [cursor=pointer]:
+              - /url: /Admin/Report/LowStock
+              - text: More info
+      - generic [ref=e156]:
+        - generic [ref=e159]:
+          - heading "Orders" [level=3] [ref=e160]: Orders
+          - generic [ref=e162]:
+            - button "Year" [ref=e163] [cursor=pointer]
+            - button "Month" [ref=e164] [cursor=pointer]
+            - button "Week" [ref=e165] [cursor=pointer]
+            - button [ref=e166] [cursor=pointer]
+        - generic [ref=e173]:
+          - heading "New customers" [level=3] [ref=e174]: New customers
+          - generic [ref=e176]:
+            - button "Year" [ref=e177] [cursor=pointer]
+            - button "Month" [ref=e178] [cursor=pointer]
+            - button "Week" [ref=e179] [cursor=pointer]
+            - button [ref=e180] [cursor=pointer]
+      - generic [ref=e185]:
+        - generic [ref=e188]:
+          - heading "Order totals" [level=3] [ref=e189]: Order totals
+          - button [ref=e192] [cursor=pointer]
+        - generic [ref=e197]:
+          - heading "Incomplete orders" [level=3] [ref=e198]: Incomplete orders
+          - button [ref=e201] [cursor=pointer]
+      - generic [ref=e204]:
+        - generic [ref=e207]:
+          - heading "Latest Orders View All Orders" [level=3] [ref=e208]:
+            - text: Latest Orders
+            - link "View All Orders" [ref=e210] [cursor=pointer]:
+              - /url: /Admin/Order/List
+          - button [ref=e212] [cursor=pointer]
+        - generic [ref=e217]:
+          - heading "Popular search keywords" [level=3] [ref=e218]: Popular search keywords
+          - button [ref=e221] [cursor=pointer]
+      - generic [ref=e224]:
+        - generic [ref=e227]:
+          - heading "Bestsellers by quantity" [level=3] [ref=e228]: Bestsellers by quantity
+          - button [ref=e231] [cursor=pointer]
+        - generic [ref=e236]:
+          - heading "Bestsellers by amount" [level=3] [ref=e237]: Bestsellers by amount
+          - button [ref=e240] [cursor=pointer]
+  - generic [ref=e246]:
+    - generic [ref=e247]:
+      - text: Powered by
+      - link "nopCommerce" [ref=e248] [cursor=pointer]:
+        - /url: https://www.nopcommerce.com/?utm_source=admin-panel&utm_medium=footer&utm_campaign=admin-panel
+    - generic [ref=e249]: Thursday, June 25, 2026 11:54 PM
+    - generic [ref=e250]: nopCommerce version 5.00.0

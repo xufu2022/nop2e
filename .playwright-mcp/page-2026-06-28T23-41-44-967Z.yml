@@ -1,0 +1,196 @@
+- generic [active] [ref=e1]:
+  - status
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - link "Skip navigation" [ref=e4] [cursor=pointer]:
+        - /url: "#main"
+      - list [ref=e9]:
+        - listitem [ref=e10]:
+          - link "Register" [ref=e11] [cursor=pointer]:
+            - /url: /register?returnUrl=%2Frecentlyviewedproducts
+        - listitem [ref=e12]:
+          - link "Log in" [ref=e13] [cursor=pointer]:
+            - /url: /login?returnUrl=%2Frecentlyviewedproducts
+        - listitem [ref=e14]:
+          - link "Wishlist (0)" [ref=e15] [cursor=pointer]:
+            - /url: /wishlist
+            - generic [ref=e16]: Wishlist
+            - generic [ref=e17]: (0)
+        - listitem [ref=e18]:
+          - link "Shopping cart (0)" [ref=e19] [cursor=pointer]:
+            - /url: /cart
+            - generic [ref=e20]: Shopping cart
+            - generic [ref=e21]: (0)
+      - generic [ref=e22]:
+        - link "Your store name" [ref=e24] [cursor=pointer]:
+          - /url: /
+          - img "Your store name" [ref=e25]
+        - search [ref=e26]:
+          - generic [ref=e27]:
+            - textbox "Search store" [ref=e28]
+            - button "Search" [ref=e29] [cursor=pointer]
+    - navigation [ref=e31]:
+      - button "Categories" [ref=e32] [cursor=pointer]
+      - menu "Categories":
+        - menuitem "Computers" [ref=e33]:
+          - button "Computers" [ref=e35] [cursor=pointer]
+          - menu "Computers":
+            - menuitem "Desktops" [ref=e36]:
+              - button "Desktops" [ref=e37] [cursor=pointer]
+            - menuitem "Notebooks" [ref=e38]:
+              - button "Notebooks" [ref=e39] [cursor=pointer]
+            - menuitem "Software" [ref=e40]:
+              - button "Software" [ref=e41] [cursor=pointer]
+        - menuitem "Electronics" [ref=e42]:
+          - button "Electronics" [ref=e44] [cursor=pointer]
+          - menu "Electronics":
+            - menuitem "Camera & photo" [ref=e45]:
+              - button "Camera & photo" [ref=e46] [cursor=pointer]
+            - menuitem "Cell phones" [ref=e47]:
+              - button "Cell phones" [ref=e48] [cursor=pointer]
+            - menuitem "Others" [ref=e49]:
+              - button "Others" [ref=e50] [cursor=pointer]
+        - menuitem "Apparel" [ref=e51]:
+          - button "Apparel" [ref=e53] [cursor=pointer]
+          - menu "Apparel":
+            - menuitem "Shoes" [ref=e54]:
+              - button "Shoes" [ref=e55] [cursor=pointer]
+            - menuitem "Clothing" [ref=e56]:
+              - button "Clothing" [ref=e57] [cursor=pointer]
+            - menuitem "Accessories" [ref=e58]:
+              - button "Accessories" [ref=e59] [cursor=pointer]
+        - menuitem "Digital downloads" [ref=e60]:
+          - button "Digital downloads" [ref=e61] [cursor=pointer]
+        - menuitem "Books" [ref=e62]:
+          - button "Books" [ref=e63] [cursor=pointer]
+        - menuitem "Jewelry" [ref=e64]:
+          - button "Jewelry" [ref=e65] [cursor=pointer]
+        - menuitem "Gift Cards" [ref=e66]:
+          - button "Gift Cards" [ref=e67] [cursor=pointer]
+    - main [ref=e68]:
+      - generic [ref=e69]:
+        - complementary [ref=e70]:
+          - heading "Manufacturers" [level=2] [ref=e72] [cursor=pointer]
+          - heading "Recently viewed products" [level=2] [ref=e74] [cursor=pointer]
+          - heading "Popular tags" [level=2] [ref=e76] [cursor=pointer]
+        - generic [ref=e78]:
+          - heading "Recently viewed products" [level=1] [ref=e80]
+          - generic [ref=e83]:
+            - article [ref=e85]:
+              - link "Picture of Nokia Lumia 1020" [ref=e87] [cursor=pointer]:
+                - /url: /nokia-lumia-1020
+                - img "Picture of Nokia Lumia 1020" [ref=e88]
+              - generic [ref=e89]:
+                - heading "Nokia Lumia 1020" [level=2] [ref=e90]:
+                  - link "Nokia Lumia 1020" [ref=e91] [cursor=pointer]:
+                    - /url: /nokia-lumia-1020
+                - generic "1 review(s)" [ref=e92]
+                - generic [ref=e95]:
+                  - generic [ref=e96]: $349.00
+                  - generic [ref=e97]:
+                    - button "Add to cart" [ref=e98] [cursor=pointer]
+                    - button "Add to compare list" [ref=e99] [cursor=pointer]
+                    - button "Add to wishlist" [ref=e100] [cursor=pointer]
+            - article [ref=e102]:
+              - link "Picture of HTC smartphone" [ref=e104] [cursor=pointer]:
+                - /url: /htc-smartphone
+                - img "Picture of HTC smartphone" [ref=e105]
+              - generic [ref=e106]:
+                - heading "HTC smartphone" [level=2] [ref=e107]:
+                  - link "HTC smartphone" [ref=e108] [cursor=pointer]:
+                    - /url: /htc-smartphone
+                - generic "0 review(s)" [ref=e109]
+                - generic [ref=e111]:
+                  - generic [ref=e112]: $245.00
+                  - generic [ref=e113]:
+                    - button "Add to cart" [ref=e114] [cursor=pointer]
+                    - button "Add to compare list" [ref=e115] [cursor=pointer]
+                    - button "Add to wishlist" [ref=e116] [cursor=pointer]
+    - contentinfo [ref=e117]:
+      - generic [ref=e118]:
+        - navigation [ref=e119]:
+          - heading "Information" [level=2] [ref=e120] [cursor=pointer]
+          - menu "Information":
+            - menuitem "Sitemap" [ref=e121]:
+              - link "Sitemap" [ref=e122] [cursor=pointer]:
+                - /url: /sitemap
+            - menuitem "Shipping & returns" [ref=e123]:
+              - link "Shipping & returns" [ref=e124] [cursor=pointer]:
+                - /url: /shipping-returns
+            - menuitem "Privacy notice" [ref=e125]:
+              - link "Privacy notice" [ref=e126] [cursor=pointer]:
+                - /url: /privacy-notice
+            - menuitem "Conditions of Use" [ref=e127]:
+              - link "Conditions of Use" [ref=e128] [cursor=pointer]:
+                - /url: /conditions-of-use
+            - menuitem "About us" [ref=e129]:
+              - link "About us" [ref=e130] [cursor=pointer]:
+                - /url: /about-us
+            - menuitem "Contact us" [ref=e131]:
+              - link "Contact us" [ref=e132] [cursor=pointer]:
+                - /url: /contactus
+          - heading "Customer service" [level=2] [ref=e133] [cursor=pointer]
+          - menu "Customer service":
+            - menuitem "Search" [ref=e134]:
+              - link "Search" [ref=e135] [cursor=pointer]:
+                - /url: /search
+            - menuitem "Blog" [ref=e136]:
+              - link "Blog" [ref=e137] [cursor=pointer]:
+                - /url: /blog
+            - menuitem "Recently viewed products" [ref=e138]:
+              - link "Recently viewed products" [ref=e139] [cursor=pointer]:
+                - /url: /recentlyviewedproducts
+            - menuitem "Compare products list" [ref=e140]:
+              - link "Compare products list" [ref=e141] [cursor=pointer]:
+                - /url: /compareproducts
+            - menuitem "New products" [ref=e142]:
+              - link "New products" [ref=e143] [cursor=pointer]:
+                - /url: /newproducts
+          - heading "My account" [level=2] [ref=e144] [cursor=pointer]
+          - menu "My account":
+            - menuitem "My account" [ref=e145]:
+              - link "My account" [ref=e146] [cursor=pointer]:
+                - /url: /customer/info
+            - menuitem "Orders" [ref=e147]:
+              - link "Orders" [ref=e148] [cursor=pointer]:
+                - /url: /order/history
+            - menuitem "Addresses" [ref=e149]:
+              - link "Addresses" [ref=e150] [cursor=pointer]:
+                - /url: /customer/addresses
+            - menuitem "Shopping cart" [ref=e151]:
+              - link "Shopping cart" [ref=e152] [cursor=pointer]:
+                - /url: /cart
+            - menuitem "Wishlist" [ref=e153]:
+              - link "Wishlist" [ref=e154] [cursor=pointer]:
+                - /url: /wishlist
+            - menuitem "Apply for vendor account" [ref=e155]:
+              - link "Apply for vendor account" [ref=e156] [cursor=pointer]:
+                - /url: /vendor/apply
+        - generic [ref=e157]:
+          - generic [ref=e158]:
+            - heading "Follow us" [level=2] [ref=e159]
+            - list [ref=e160]:
+              - listitem [ref=e161]:
+                - link "Facebook" [ref=e162] [cursor=pointer]:
+                  - /url: https://www.facebook.com/nopCommerce
+              - listitem [ref=e163]:
+                - link "X" [ref=e164] [cursor=pointer]:
+                  - /url: https://x.com/nopCommerce
+              - listitem [ref=e165]:
+                - link "YouTube" [ref=e166] [cursor=pointer]:
+                  - /url: https://www.youtube.com/user/nopCommerce
+              - listitem [ref=e167]:
+                - link "Instagram" [ref=e168] [cursor=pointer]:
+                  - /url: https://www.instagram.com/nopcommerce_official
+          - form [ref=e169]:
+            - heading "Newsletter" [level=2] [ref=e170]
+            - generic [ref=e172]:
+              - textbox "Sign up for our newsletter" [ref=e173]:
+                - /placeholder: Enter your email here...
+              - button "Subscribe" [ref=e174] [cursor=pointer]
+      - generic [ref=e175]:
+        - generic [ref=e176]: Copyright © 2026 Your store name. All rights reserved.
+        - generic [ref=e177]:
+          - text: Powered by
+          - link "nopCommerce" [ref=e178] [cursor=pointer]:
+            - /url: https://www.nopcommerce.com/

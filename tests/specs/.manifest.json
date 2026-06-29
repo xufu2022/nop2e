@@ -1,0 +1,50 @@
+{
+  "docs/specs/login-logout.md": {
+    "spec": "tests/specs/public/login-logout.spec.ts",
+    "poms": [
+      "tests/pages/public/LoginPage.ts",
+      "tests/pages/public/HomePage.ts"
+    ],
+    "date": "2026-06-26"
+  },
+  "docs/specs/public/dashboard.md": {
+    "spec": "tests/specs/public/dashboard.spec.ts",
+    "poms": [
+      "tests/pages/public/HomePage.ts"
+    ],
+    "date": "2026-06-25"
+  },
+  "docs/specs/admin/product-management.md": {
+    "spec": "tests/specs/admin/product-management.spec.ts",
+    "poms": [
+      "tests/pages/admin/AdminProductListPage.ts",
+      "tests/pages/admin/AdminProductCreatePage.ts"
+    ],
+    "date": "2026-06-27"
+  },
+  "docs/specs/shopping-cart.md": {
+    "spec": "tests/specs/public/shopping-cart.spec.ts",
+    "poms": [
+      "tests/pages/public/ProductPage.ts",
+      "tests/pages/public/CartPage.ts"
+    ],
+    "date": "2026-06-26"
+  },
+  "docs/specs/admin/admin-dashboard.md": {
+    "spec": "tests/specs/admin/admin-dashboard.spec.ts",
+    "poms": [
+      "tests/pages/admin/AdminDashboardPage.ts",
+      "tests/pages/admin/components/AdminLeftMenu.ts",
+      "tests/pages/admin/components/AdminTopMenu.ts"
+    ],
+    "date": "2026-06-26"
+  },
+  "docs/specs/admin/order-management.md": {
+    "spec": "tests/specs/admin/order-management.spec.ts",
+    "poms": [
+      "tests/pages/admin/AdminOrderListPage.ts",
+      "tests/pages/admin/AdminOrderDetailsPage.ts"
+    ],
+    "date": "2026-06-26"
+  }
+}

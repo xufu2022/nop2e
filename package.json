@@ -1,0 +1,28 @@
+{
+  "name": "playwrighte2e",
+  "version": "1.0.0",
+  "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test",
+    "test:headed": "npx playwright test --headed",
+    "test:ui": "npx playwright test --ui",
+    "test:debug": "npx playwright test --debug",
+    "test:report": "npx playwright show-report",
+    "test:chromium": "npx playwright test --project=chromium",
+    "test:public": "npx playwright test --project=public",
+    "test:uat-ca": "cross-env ENV_FILE=uat-ca.env npx playwright test",
+    "suggest-filename": "node tools/suggest-filename.js"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0",
+    "ts-node": "^10.9.2",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.5"
+  }
+}

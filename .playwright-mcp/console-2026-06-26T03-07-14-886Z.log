@@ -1,0 +1,3 @@
+[     145ms] [LOG] JQMIGRATE: Migrate is installed, version 3.4.1 @ https://localhost:59130/js/svf1umed8_rvslv_e-ziza.scripts.js?v=F1E-qn9xRAH8fT3Q9mBO8968euI:22
+[     174ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://localhost:59130/Themes/DefaultClean/Content/images/vote-down.png:0
+[     183ms] [ERROR] Failed to load resource: the server responded with a status of 404 () @ https://localhost:59130/Themes/DefaultClean/Content/images/vote-up.png:0

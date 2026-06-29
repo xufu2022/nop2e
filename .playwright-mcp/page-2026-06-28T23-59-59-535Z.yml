@@ -1,0 +1,195 @@
+- generic [active] [ref=e1]:
+  - status
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - link "Administration" [ref=e4] [cursor=pointer]:
+        - /url: /Admin
+    - banner [ref=e5]:
+      - link "Skip navigation" [ref=e6] [cursor=pointer]:
+        - /url: "#main"
+      - list [ref=e11]:
+        - listitem [ref=e12]:
+          - link "My account" [ref=e13] [cursor=pointer]:
+            - /url: /customer/info
+        - listitem [ref=e14]:
+          - link "Log out" [ref=e15] [cursor=pointer]:
+            - /url: /logout
+        - listitem [ref=e16]:
+          - link "Wishlist (1)" [ref=e17] [cursor=pointer]:
+            - /url: /wishlist
+            - generic [ref=e18]: Wishlist
+            - generic [ref=e19]: (1)
+        - listitem [ref=e20]:
+          - link "Shopping cart (5)" [ref=e21] [cursor=pointer]:
+            - /url: /cart
+            - generic [ref=e22]: Shopping cart
+            - generic [ref=e23]: (5)
+      - generic [ref=e24]:
+        - link "Your store name" [ref=e26] [cursor=pointer]:
+          - /url: /
+          - img "Your store name" [ref=e27]
+        - search [ref=e28]:
+          - generic [ref=e29]:
+            - textbox "Search store" [ref=e30]
+            - button "Search" [ref=e31] [cursor=pointer]
+    - navigation [ref=e33]:
+      - button "Categories" [ref=e34] [cursor=pointer]
+      - menu "Categories":
+        - menuitem "Computers" [ref=e35]:
+          - button "Computers" [ref=e37] [cursor=pointer]
+          - menu "Computers":
+            - menuitem "Desktops" [ref=e38]:
+              - button "Desktops" [ref=e39] [cursor=pointer]
+            - menuitem "Notebooks" [ref=e40]:
+              - button "Notebooks" [ref=e41] [cursor=pointer]
+            - menuitem "Software" [ref=e42]:
+              - button "Software" [ref=e43] [cursor=pointer]
+        - menuitem "Electronics" [ref=e44]:
+          - button "Electronics" [ref=e46] [cursor=pointer]
+          - menu "Electronics":
+            - menuitem "Camera & photo" [ref=e47]:
+              - button "Camera & photo" [ref=e48] [cursor=pointer]
+            - menuitem "Cell phones" [ref=e49]:
+              - button "Cell phones" [ref=e50] [cursor=pointer]
+            - menuitem "Others" [ref=e51]:
+              - button "Others" [ref=e52] [cursor=pointer]
+        - menuitem "Apparel" [ref=e53]:
+          - button "Apparel" [ref=e55] [cursor=pointer]
+          - menu "Apparel":
+            - menuitem "Shoes" [ref=e56]:
+              - button "Shoes" [ref=e57] [cursor=pointer]
+            - menuitem "Clothing" [ref=e58]:
+              - button "Clothing" [ref=e59] [cursor=pointer]
+            - menuitem "Accessories" [ref=e60]:
+              - button "Accessories" [ref=e61] [cursor=pointer]
+        - menuitem "Digital downloads" [ref=e62]:
+          - button "Digital downloads" [ref=e63] [cursor=pointer]
+        - menuitem "Books" [ref=e64]:
+          - button "Books" [ref=e65] [cursor=pointer]
+        - menuitem "Jewelry" [ref=e66]:
+          - button "Jewelry" [ref=e67] [cursor=pointer]
+        - menuitem "Gift Cards" [ref=e68]:
+          - button "Gift Cards" [ref=e69] [cursor=pointer]
+    - main [ref=e70]:
+      - generic [ref=e73]:
+        - heading "Wishlist" [level=1] [ref=e75]
+        - generic [ref=e76]:
+          - button "Custom wishlist" [ref=e78] [cursor=pointer]
+          - generic [ref=e80]:
+            - table [ref=e82]:
+              - rowgroup [ref=e83]:
+                - 'row "Add to cart: Add to cart SKU: APPLE_CAM Picture of Apple iCam Apple iCam Price: $1,300.00 Qty.: 1 Total: $1,300.00" [ref=e84]':
+                  - 'cell "Add to cart: Add to cart" [ref=e85]':
+                    - text: "Add to cart:"
+                    - checkbox "Add to cart" [ref=e86]
+                  - 'cell "SKU: APPLE_CAM" [ref=e87]'
+                  - cell "Picture of Apple iCam" [ref=e88]:
+                    - link "Picture of Apple iCam" [ref=e89] [cursor=pointer]:
+                      - /url: /apple-icam
+                      - img "Picture of Apple iCam" [ref=e90]
+                  - cell "Apple iCam" [ref=e91]:
+                    - link "Apple iCam" [ref=e92] [cursor=pointer]:
+                      - /url: /apple-icam
+                  - 'cell "Price: $1,300.00" [ref=e93]'
+                  - 'cell "Qty.: 1" [ref=e94]':
+                    - text: "Qty.:"
+                    - textbox "Qty." [ref=e95]: "1"
+                  - 'cell "Total: $1,300.00" [ref=e96]'
+                  - cell [ref=e97]:
+                    - button "Remove" [ref=e98] [cursor=pointer]
+            - generic [ref=e99]:
+              - button "Update wishlist" [ref=e100] [cursor=pointer]
+              - button "Add to cart" [ref=e101] [cursor=pointer]
+              - button "Email a friend" [ref=e102] [cursor=pointer]
+          - generic [ref=e103]:
+            - generic [ref=e104]: "Your wishlist URL for sharing:"
+            - link "https://localhost:59130/wishlist/20e22585-eeaf-499b-9e24-2e783e2cae04" [ref=e105] [cursor=pointer]:
+              - /url: https://localhost:59130/wishlist/20e22585-eeaf-499b-9e24-2e783e2cae04
+    - contentinfo [ref=e106]:
+      - generic [ref=e107]:
+        - navigation [ref=e108]:
+          - heading "Information" [level=2] [ref=e109] [cursor=pointer]
+          - menu "Information":
+            - menuitem "Sitemap" [ref=e110]:
+              - link "Sitemap" [ref=e111] [cursor=pointer]:
+                - /url: /sitemap
+            - menuitem "Shipping & returns" [ref=e112]:
+              - link "Shipping & returns" [ref=e113] [cursor=pointer]:
+                - /url: /shipping-returns
+            - menuitem "Privacy notice" [ref=e114]:
+              - link "Privacy notice" [ref=e115] [cursor=pointer]:
+                - /url: /privacy-notice
+            - menuitem "Conditions of Use" [ref=e116]:
+              - link "Conditions of Use" [ref=e117] [cursor=pointer]:
+                - /url: /conditions-of-use
+            - menuitem "About us" [ref=e118]:
+              - link "About us" [ref=e119] [cursor=pointer]:
+                - /url: /about-us
+            - menuitem "Contact us" [ref=e120]:
+              - link "Contact us" [ref=e121] [cursor=pointer]:
+                - /url: /contactus
+          - heading "Customer service" [level=2] [ref=e122] [cursor=pointer]
+          - menu "Customer service":
+            - menuitem "Search" [ref=e123]:
+              - link "Search" [ref=e124] [cursor=pointer]:
+                - /url: /search
+            - menuitem "Blog" [ref=e125]:
+              - link "Blog" [ref=e126] [cursor=pointer]:
+                - /url: /blog
+            - menuitem "Recently viewed products" [ref=e127]:
+              - link "Recently viewed products" [ref=e128] [cursor=pointer]:
+                - /url: /recentlyviewedproducts
+            - menuitem "Compare products list" [ref=e129]:
+              - link "Compare products list" [ref=e130] [cursor=pointer]:
+                - /url: /compareproducts
+            - menuitem "New products" [ref=e131]:
+              - link "New products" [ref=e132] [cursor=pointer]:
+                - /url: /newproducts
+          - heading "My account" [level=2] [ref=e133] [cursor=pointer]
+          - menu "My account":
+            - menuitem "My account" [ref=e134]:
+              - link "My account" [ref=e135] [cursor=pointer]:
+                - /url: /customer/info
+            - menuitem "Orders" [ref=e136]:
+              - link "Orders" [ref=e137] [cursor=pointer]:
+                - /url: /order/history
+            - menuitem "Addresses" [ref=e138]:
+              - link "Addresses" [ref=e139] [cursor=pointer]:
+                - /url: /customer/addresses
+            - menuitem "Shopping cart" [ref=e140]:
+              - link "Shopping cart" [ref=e141] [cursor=pointer]:
+                - /url: /cart
+            - menuitem "Wishlist" [ref=e142]:
+              - link "Wishlist" [ref=e143] [cursor=pointer]:
+                - /url: /wishlist
+            - menuitem "Apply for vendor account" [ref=e144]:
+              - link "Apply for vendor account" [ref=e145] [cursor=pointer]:
+                - /url: /vendor/apply
+        - generic [ref=e146]:
+          - generic [ref=e147]:
+            - heading "Follow us" [level=2] [ref=e148]
+            - list [ref=e149]:
+              - listitem [ref=e150]:
+                - link "Facebook" [ref=e151] [cursor=pointer]:
+                  - /url: https://www.facebook.com/nopCommerce
+              - listitem [ref=e152]:
+                - link "X" [ref=e153] [cursor=pointer]:
+                  - /url: https://x.com/nopCommerce
+              - listitem [ref=e154]:
+                - link "YouTube" [ref=e155] [cursor=pointer]:
+                  - /url: https://www.youtube.com/user/nopCommerce
+              - listitem [ref=e156]:
+                - link "Instagram" [ref=e157] [cursor=pointer]:
+                  - /url: https://www.instagram.com/nopcommerce_official
+          - form [ref=e158]:
+            - heading "Newsletter" [level=2] [ref=e159]
+            - generic [ref=e161]:
+              - textbox "Sign up for our newsletter" [ref=e162]:
+                - /placeholder: Enter your email here...
+              - button "Subscribe" [ref=e163] [cursor=pointer]
+      - generic [ref=e164]:
+        - generic [ref=e165]: Copyright © 2026 Your store name. All rights reserved.
+        - generic [ref=e166]:
+          - text: Powered by
+          - link "nopCommerce" [ref=e167] [cursor=pointer]:
+            - /url: https://www.nopcommerce.com/

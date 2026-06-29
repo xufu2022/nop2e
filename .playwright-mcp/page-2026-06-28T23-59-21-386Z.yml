@@ -1,0 +1,255 @@
+- generic [active] [ref=e1]:
+  - status
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - link "Administration" [ref=e4] [cursor=pointer]:
+        - /url: /Admin
+      - link "Manage this page" [ref=e5] [cursor=pointer]:
+        - /url: /Admin/Category/Edit/7
+    - banner [ref=e6]:
+      - link "Skip navigation" [ref=e7] [cursor=pointer]:
+        - /url: "#main"
+      - list [ref=e12]:
+        - listitem [ref=e13]:
+          - link "My account" [ref=e14] [cursor=pointer]:
+            - /url: /customer/info
+        - listitem [ref=e15]:
+          - link "Log out" [ref=e16] [cursor=pointer]:
+            - /url: /logout
+        - listitem [ref=e17]:
+          - link "Wishlist (0)" [ref=e18] [cursor=pointer]:
+            - /url: /wishlist
+            - generic [ref=e19]: Wishlist
+            - generic [ref=e20]: (0)
+        - listitem [ref=e21]:
+          - link "Shopping cart (5)" [ref=e22] [cursor=pointer]:
+            - /url: /cart
+            - generic [ref=e23]: Shopping cart
+            - generic [ref=e24]: (5)
+      - generic [ref=e25]:
+        - link "Your store name" [ref=e27] [cursor=pointer]:
+          - /url: /
+          - img "Your store name" [ref=e28]
+        - search [ref=e29]:
+          - generic [ref=e30]:
+            - textbox "Search store" [ref=e31]
+            - button "Search" [ref=e32] [cursor=pointer]
+    - navigation [ref=e34]:
+      - button "Categories" [ref=e35] [cursor=pointer]
+      - menu "Categories":
+        - menuitem "Computers" [ref=e36]:
+          - button "Computers" [ref=e38] [cursor=pointer]
+          - menu "Computers":
+            - menuitem "Desktops" [ref=e39]:
+              - button "Desktops" [ref=e40] [cursor=pointer]
+            - menuitem "Notebooks" [ref=e41]:
+              - button "Notebooks" [ref=e42] [cursor=pointer]
+            - menuitem "Software" [ref=e43]:
+              - button "Software" [ref=e44] [cursor=pointer]
+        - menuitem "Electronics" [ref=e45]:
+          - button "Electronics" [ref=e47] [cursor=pointer]
+          - menu "Electronics":
+            - menuitem "Camera & photo" [ref=e48]:
+              - button "Camera & photo" [ref=e49] [cursor=pointer]
+            - menuitem "Cell phones" [ref=e50]:
+              - button "Cell phones" [ref=e51] [cursor=pointer]
+            - menuitem "Others" [ref=e52]:
+              - button "Others" [ref=e53] [cursor=pointer]
+        - menuitem "Apparel" [ref=e54]:
+          - button "Apparel" [ref=e56] [cursor=pointer]
+          - menu "Apparel":
+            - menuitem "Shoes" [ref=e57]:
+              - button "Shoes" [ref=e58] [cursor=pointer]
+            - menuitem "Clothing" [ref=e59]:
+              - button "Clothing" [ref=e60] [cursor=pointer]
+            - menuitem "Accessories" [ref=e61]:
+              - button "Accessories" [ref=e62] [cursor=pointer]
+        - menuitem "Digital downloads" [ref=e63]:
+          - button "Digital downloads" [ref=e64] [cursor=pointer]
+        - menuitem "Books" [ref=e65]:
+          - button "Books" [ref=e66] [cursor=pointer]
+        - menuitem "Jewelry" [ref=e67]:
+          - button "Jewelry" [ref=e68] [cursor=pointer]
+        - menuitem "Gift Cards" [ref=e69]:
+          - button "Gift Cards" [ref=e70] [cursor=pointer]
+    - main [ref=e71]:
+      - generic [ref=e72]:
+        - list [ref=e74]:
+          - listitem [ref=e75]:
+            - link "Home" [ref=e76] [cursor=pointer]:
+              - /url: /
+            - generic [ref=e77]: /
+          - listitem [ref=e78]:
+            - link "Electronics" [ref=e79] [cursor=pointer]:
+              - /url: /electronics
+              - generic [ref=e80]: Electronics
+            - generic [ref=e81]: /
+          - listitem [ref=e82]:
+            - strong [ref=e83]: Camera & photo
+        - complementary [ref=e84]:
+          - generic [ref=e86]:
+            - heading "Filter by manufacturer" [level=2] [ref=e87]
+            - list [ref=e89]:
+              - listitem [ref=e90]:
+                - checkbox "Apple" [ref=e91]
+                - generic [ref=e92] [cursor=pointer]: Apple
+          - heading "Manufacturers" [level=2] [ref=e94] [cursor=pointer]
+          - heading "Recently viewed products" [level=2] [ref=e96] [cursor=pointer]
+          - heading "Popular tags" [level=2] [ref=e98] [cursor=pointer]
+        - generic [ref=e100]:
+          - heading "Camera & photo" [level=1] [ref=e102]
+          - generic [ref=e103]:
+            - generic [ref=e104]:
+              - generic [ref=e105]:
+                - button "Grid" [ref=e106] [cursor=pointer]
+                - button "List" [ref=e107] [cursor=pointer]
+              - generic [ref=e108]:
+                - text: Sort by
+                - combobox "Select product sort order" [ref=e109]:
+                  - option "Position" [selected]
+                  - 'option "Name: A to Z"'
+                  - 'option "Name: Z to A"'
+                  - 'option "Price: Low to High"'
+                  - 'option "Price: High to Low"'
+                  - option "Created on"
+              - generic [ref=e110]:
+                - text: Display
+                - combobox "Select number of products per page" [ref=e111]:
+                  - option "3"
+                  - option "6" [selected]
+                  - option "9"
+                - text: per page
+            - generic [ref=e115]:
+              - article [ref=e117]:
+                - link "Picture of Apple iCam" [ref=e119] [cursor=pointer]:
+                  - /url: /apple-icam
+                  - img "Picture of Apple iCam" [ref=e120]
+                - generic [ref=e121]:
+                  - heading "Apple iCam" [level=2] [ref=e122]:
+                    - link "Apple iCam" [ref=e123] [cursor=pointer]:
+                      - /url: /apple-icam
+                  - generic "1 review(s)" [ref=e124]
+                  - generic [ref=e127]:
+                    - generic [ref=e128]: $1,300.00
+                    - generic [ref=e129]:
+                      - button "Add to cart" [ref=e130] [cursor=pointer]
+                      - button "Add to compare list" [ref=e131] [cursor=pointer]
+                      - button "Add to wishlist" [ref=e132] [cursor=pointer]
+              - article [ref=e134]:
+                - link "Picture of Leica T Mirrorless Digital Camera" [ref=e136] [cursor=pointer]:
+                  - /url: /leica-t-mirrorless-digital-camera
+                  - img "Picture of Leica T Mirrorless Digital Camera" [ref=e137]
+                - generic [ref=e138]:
+                  - heading "Leica T Mirrorless Digital Camera" [level=2] [ref=e139]:
+                    - link "Leica T Mirrorless Digital Camera" [ref=e140] [cursor=pointer]:
+                      - /url: /leica-t-mirrorless-digital-camera
+                  - generic "0 review(s)" [ref=e141]
+                  - generic [ref=e143]:
+                    - generic [ref=e144]: $530.00
+                    - generic [ref=e145]:
+                      - button "Add to cart" [ref=e146] [cursor=pointer]
+                      - button "Add to compare list" [ref=e147] [cursor=pointer]
+                      - button "Add to wishlist" [ref=e148] [cursor=pointer]
+              - article [ref=e150]:
+                - link "Picture of Nikon D5500 DSLR" [ref=e152] [cursor=pointer]:
+                  - /url: /nikon-d5500-dslr
+                  - img "Picture of Nikon D5500 DSLR" [ref=e153]
+                - generic [ref=e154]:
+                  - heading "Nikon D5500 DSLR" [level=2] [ref=e155]:
+                    - link "Nikon D5500 DSLR" [ref=e156] [cursor=pointer]:
+                      - /url: /nikon-d5500-dslr
+                  - generic "0 review(s)" [ref=e157]
+                  - generic [ref=e159]:
+                    - generic [ref=e160]: From $630.00
+                    - generic [ref=e161]:
+                      - button "Add to cart" [ref=e162] [cursor=pointer]
+                      - button "Add to compare list" [ref=e163] [cursor=pointer]
+                      - button "Add to wishlist" [ref=e164] [cursor=pointer]
+    - contentinfo [ref=e165]:
+      - generic [ref=e166]:
+        - navigation [ref=e167]:
+          - heading "Information" [level=2] [ref=e168] [cursor=pointer]
+          - menu "Information":
+            - menuitem "Sitemap" [ref=e169]:
+              - link "Sitemap" [ref=e170] [cursor=pointer]:
+                - /url: /sitemap
+            - menuitem "Shipping & returns" [ref=e171]:
+              - link "Shipping & returns" [ref=e172] [cursor=pointer]:
+                - /url: /shipping-returns
+            - menuitem "Privacy notice" [ref=e173]:
+              - link "Privacy notice" [ref=e174] [cursor=pointer]:
+                - /url: /privacy-notice
+            - menuitem "Conditions of Use" [ref=e175]:
+              - link "Conditions of Use" [ref=e176] [cursor=pointer]:
+                - /url: /conditions-of-use
+            - menuitem "About us" [ref=e177]:
+              - link "About us" [ref=e178] [cursor=pointer]:
+                - /url: /about-us
+            - menuitem "Contact us" [ref=e179]:
+              - link "Contact us" [ref=e180] [cursor=pointer]:
+                - /url: /contactus
+          - heading "Customer service" [level=2] [ref=e181] [cursor=pointer]
+          - menu "Customer service":
+            - menuitem "Search" [ref=e182]:
+              - link "Search" [ref=e183] [cursor=pointer]:
+                - /url: /search
+            - menuitem "Blog" [ref=e184]:
+              - link "Blog" [ref=e185] [cursor=pointer]:
+                - /url: /blog
+            - menuitem "Recently viewed products" [ref=e186]:
+              - link "Recently viewed products" [ref=e187] [cursor=pointer]:
+                - /url: /recentlyviewedproducts
+            - menuitem "Compare products list" [ref=e188]:
+              - link "Compare products list" [ref=e189] [cursor=pointer]:
+                - /url: /compareproducts
+            - menuitem "New products" [ref=e190]:
+              - link "New products" [ref=e191] [cursor=pointer]:
+                - /url: /newproducts
+          - heading "My account" [level=2] [ref=e192] [cursor=pointer]
+          - menu "My account":
+            - menuitem "My account" [ref=e193]:
+              - link "My account" [ref=e194] [cursor=pointer]:
+                - /url: /customer/info
+            - menuitem "Orders" [ref=e195]:
+              - link "Orders" [ref=e196] [cursor=pointer]:
+                - /url: /order/history
+            - menuitem "Addresses" [ref=e197]:
+              - link "Addresses" [ref=e198] [cursor=pointer]:
+                - /url: /customer/addresses
+            - menuitem "Shopping cart" [ref=e199]:
+              - link "Shopping cart" [ref=e200] [cursor=pointer]:
+                - /url: /cart
+            - menuitem "Wishlist" [ref=e201]:
+              - link "Wishlist" [ref=e202] [cursor=pointer]:
+                - /url: /wishlist
+            - menuitem "Apply for vendor account" [ref=e203]:
+              - link "Apply for vendor account" [ref=e204] [cursor=pointer]:
+                - /url: /vendor/apply
+        - generic [ref=e205]:
+          - generic [ref=e206]:
+            - heading "Follow us" [level=2] [ref=e207]
+            - list [ref=e208]:
+              - listitem [ref=e209]:
+                - link "Facebook" [ref=e210] [cursor=pointer]:
+                  - /url: https://www.facebook.com/nopCommerce
+              - listitem [ref=e211]:
+                - link "X" [ref=e212] [cursor=pointer]:
+                  - /url: https://x.com/nopCommerce
+              - listitem [ref=e213]:
+                - link "YouTube" [ref=e214] [cursor=pointer]:
+                  - /url: https://www.youtube.com/user/nopCommerce
+              - listitem [ref=e215]:
+                - link "Instagram" [ref=e216] [cursor=pointer]:
+                  - /url: https://www.instagram.com/nopcommerce_official
+          - form [ref=e217]:
+            - heading "Newsletter" [level=2] [ref=e218]
+            - generic [ref=e220]:
+              - textbox "Sign up for our newsletter" [ref=e221]:
+                - /placeholder: Enter your email here...
+              - button "Subscribe" [ref=e222] [cursor=pointer]
+      - generic [ref=e223]:
+        - generic [ref=e224]: Copyright © 2026 Your store name. All rights reserved.
+        - generic [ref=e225]:
+          - text: Powered by
+          - link "nopCommerce" [ref=e226] [cursor=pointer]:
+            - /url: https://www.nopcommerce.com/

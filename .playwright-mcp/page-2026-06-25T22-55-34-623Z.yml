@@ -1,0 +1,293 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e4]:
+    - navigation [ref=e5]:
+      - list [ref=e6]:
+        - listitem [ref=e7]:
+          - link [ref=e8] [cursor=pointer]:
+            - /url: "#"
+      - link [ref=e10] [cursor=pointer]:
+        - /url: /Admin
+      - list [ref=e12]:
+        - listitem
+        - listitem [ref=e13]:
+          - link "John Smith":
+            - /url: "#"
+        - listitem [ref=e14]:
+          - link "Logout" [ref=e15] [cursor=pointer]:
+            - /url: /logout
+        - listitem
+        - listitem [ref=e16]:
+          - link "Public store" [ref=e17] [cursor=pointer]:
+            - /url: /
+        - listitem [ref=e18]:
+          - link [ref=e19] [cursor=pointer]:
+            - /url: "#"
+    - complementary [ref=e21]:
+      - link "logo.png" [ref=e22] [cursor=pointer]:
+        - /url: /Admin
+        - img "logo.png" [ref=e23]
+      - navigation [ref=e25]:
+        - menu [ref=e26]:
+          - listitem [ref=e27]:
+            - link "Dashboard" [ref=e28] [cursor=pointer]:
+              - /url: /Admin
+              - paragraph [ref=e30]: Dashboard
+          - listitem [ref=e31]:
+            - link "Catalog" [ref=e32] [cursor=pointer]:
+              - /url: "#"
+              - paragraph [ref=e34]: Catalog
+          - listitem [ref=e36]:
+            - link "Sales" [ref=e37] [cursor=pointer]:
+              - /url: "#"
+              - paragraph [ref=e39]: Sales
+            - list [ref=e41]:
+              - listitem [ref=e42]:
+                - link "Orders" [ref=e43] [cursor=pointer]:
+                  - /url: /Admin/Order/List
+                  - paragraph [ref=e45]: Orders
+              - listitem [ref=e46]:
+                - link "Shipments" [ref=e47] [cursor=pointer]:
+                  - /url: /Admin/Order/ShipmentList
+                  - paragraph [ref=e49]: Shipments
+              - listitem [ref=e50]:
+                - link "Return requests" [ref=e51] [cursor=pointer]:
+                  - /url: /Admin/ReturnRequest/List
+                  - paragraph [ref=e53]: Return requests
+              - listitem [ref=e54]:
+                - link "Recurring payments" [ref=e55] [cursor=pointer]:
+                  - /url: /Admin/RecurringPayment/List
+                  - paragraph [ref=e57]: Recurring payments
+              - listitem [ref=e58]:
+                - link "Gift cards" [ref=e59] [cursor=pointer]:
+                  - /url: /Admin/GiftCard/List
+                  - paragraph [ref=e61]: Gift cards
+              - listitem [ref=e62]:
+                - link "Shopping carts and wishlists" [ref=e63] [cursor=pointer]:
+                  - /url: /Admin/ShoppingCart/CurrentCarts
+                  - paragraph [ref=e65]: Shopping carts and wishlists
+          - listitem [ref=e66]:
+            - link "Customers" [ref=e67] [cursor=pointer]:
+              - /url: "#"
+              - paragraph [ref=e69]: Customers
+          - listitem [ref=e71]:
+            - link "Promotions" [ref=e72] [cursor=pointer]:
+              - /url: "#"
+              - paragraph [ref=e74]: Promotions
+          - listitem [ref=e76]:
+            - link "Content management" [ref=e77] [cursor=pointer]:
+              - /url: "#"
+              - paragraph [ref=e79]: Content management
+          - listitem [ref=e81]:
+            - link "Configuration" [ref=e82] [cursor=pointer]:
+              - /url: "#"
+              - paragraph [ref=e84]: Configuration
+          - listitem [ref=e86]:
+            - link "System" [ref=e87] [cursor=pointer]:
+              - /url: "#"
+              - paragraph [ref=e89]: System
+          - listitem [ref=e91]:
+            - link "Reports" [ref=e92] [cursor=pointer]:
+              - /url: "#"
+              - paragraph [ref=e94]: Reports
+          - listitem [ref=e96]:
+            - link "Help" [ref=e97] [cursor=pointer]:
+              - /url: "#"
+              - paragraph [ref=e99]: Help
+    - generic [ref=e102]:
+      - generic [ref=e103]:
+        - heading "Orders" [level=1] [ref=e104]
+        - generic [ref=e105]:
+          - generic [ref=e106]:
+            - button "Export" [ref=e107] [cursor=pointer]: Export
+            - button [ref=e109] [cursor=pointer]
+          - button "Import" [ref=e111] [cursor=pointer]: Import
+          - generic [ref=e113]:
+            - button "Print PDF invoices" [ref=e114] [cursor=pointer]: Print PDF invoices
+            - button [ref=e116] [cursor=pointer]
+      - generic [ref=e121]:
+        - generic [ref=e123]:
+          - generic [ref=e125] [cursor=pointer]: Search
+          - generic [ref=e130]:
+            - generic [ref=e131]:
+              - generic [ref=e132]:
+                - generic [ref=e133]:
+                  - generic [ref=e136]: Start date
+                  - textbox "Start date" [ref=e138]
+                - generic [ref=e139]:
+                  - generic [ref=e142]: End date
+                  - textbox "End date" [ref=e144]
+                - generic [ref=e145]:
+                  - generic [ref=e148]: Warehouse
+                  - generic [ref=e150]:
+                    - combobox [ref=e151]
+                    - combobox "All" [ref=e154] [cursor=pointer]:
+                      - textbox "All" [ref=e155]
+                - generic [ref=e156]:
+                  - generic [ref=e159]: Product
+                  - textbox [ref=e161]
+                - generic [ref=e162]:
+                  - generic [ref=e165]: Order statuses
+                  - generic [ref=e167]:
+                    - listbox [ref=e168]:
+                      - option [selected] [ref=e169]: All
+                      - option [ref=e170]: Pending
+                      - option [ref=e171]: Processing
+                      - option [ref=e172]: Complete
+                      - option [ref=e173]: Cancelled
+                    - combobox [ref=e176]:
+                      - list [ref=e177]:
+                        - listitem "All" [ref=e178]: × All
+                        - listitem [ref=e179]:
+                          - searchbox [ref=e180]
+                - generic [ref=e181]:
+                  - generic [ref=e184]: Payment statuses
+                  - generic [ref=e186]:
+                    - listbox [ref=e187]:
+                      - option [selected] [ref=e188]: All
+                      - option [ref=e189]: Pending
+                      - option [ref=e190]: Authorized
+                      - option [ref=e191]: Paid
+                      - option [ref=e192]: Partially refunded
+                      - option [ref=e193]: Refunded
+                      - option [ref=e194]: Voided
+                    - combobox [ref=e197]:
+                      - list [ref=e198]:
+                        - listitem "All" [ref=e199]: × All
+                        - listitem [ref=e200]:
+                          - searchbox [ref=e201]
+                - generic [ref=e202]:
+                  - generic [ref=e205]: Shipping statuses
+                  - generic [ref=e207]:
+                    - listbox [ref=e208]:
+                      - option [selected] [ref=e209]: All
+                      - option [ref=e210]: Shipping not required
+                      - option [ref=e211]: Not yet shipped
+                      - option [ref=e212]: Partially shipped
+                      - option [ref=e213]: Shipped
+                      - option [ref=e214]: Delivered
+                    - combobox [ref=e217]:
+                      - list [ref=e218]:
+                        - listitem "All" [ref=e219]: × All
+                        - listitem [ref=e220]:
+                          - searchbox [ref=e221]
+              - generic [ref=e222]:
+                - generic [ref=e223]:
+                  - generic [ref=e226]: Vendor
+                  - generic [ref=e228]:
+                    - combobox [ref=e229]
+                    - combobox "All" [ref=e232] [cursor=pointer]:
+                      - textbox "All" [ref=e233]
+                - generic [ref=e234]:
+                  - generic [ref=e237]: Billing phone number
+                  - textbox "Billing phone number" [ref=e239]
+                - generic [ref=e240]:
+                  - generic [ref=e243]: Billing email address
+                  - textbox "Billing email address" [ref=e245]
+                - generic [ref=e246]:
+                  - generic [ref=e249]: Billing last name
+                  - textbox "Billing last name" [ref=e251]
+                - generic [ref=e252]:
+                  - generic [ref=e255]: Billing country
+                  - generic [ref=e257]:
+                    - combobox [ref=e258]
+                    - combobox "All" [ref=e261] [cursor=pointer]:
+                      - textbox "All" [ref=e262]
+                - generic [ref=e263]:
+                  - generic [ref=e266]: Order notes
+                  - textbox "Order notes" [ref=e268]
+                - generic [ref=e269]:
+                  - generic [ref=e272]: "Go directly to order #"
+                  - generic [ref=e274]:
+                    - 'textbox "Go directly to order #" [ref=e275]'
+                    - button "Go" [ref=e277] [cursor=pointer]
+            - button "Search" [ref=e280] [cursor=pointer]: Search
+        - generic [ref=e283]:
+          - generic [ref=e285]:
+            - text: Learn more about
+            - link "orders" [ref=e286] [cursor=pointer]:
+              - /url: https://docs.nopcommerce.com/running-your-store/order-management/orders.html?utm_source=admin-panel&utm_medium=admin-page&utm_campaign=documentation&utm_content=doc-reference
+          - generic [ref=e287]:
+            - generic [ref=e290]:
+              - status [ref=e291]
+              - table [ref=e295]:
+                - rowgroup [ref=e296]:
+                  - 'row "Order # Order status Payment status Shipping status Customer Created on Order total View" [ref=e297]':
+                    - columnheader [ref=e298]:
+                      - checkbox [ref=e300]
+                    - 'columnheader "Order #" [ref=e301]'
+                    - columnheader "Order status" [ref=e302]
+                    - columnheader "Payment status" [ref=e303]
+                    - columnheader "Shipping status" [ref=e304]
+                    - columnheader "Customer" [ref=e305]
+                    - columnheader "Created on" [ref=e306]
+                    - columnheader "Order total" [ref=e307]
+                    - columnheader "View" [ref=e308]
+              - table [ref=e320]:
+                - rowgroup:
+                  - row:
+                    - cell
+                    - cell
+                    - cell
+                    - cell
+                    - cell
+                    - cell
+                    - cell
+                    - cell
+                    - cell
+                - rowgroup:
+                  - 'row "Order # Order status Payment status Shipping status Customer Created on Order total View"':
+                    - columnheader:
+                      - checkbox [ref=e332]
+                    - 'columnheader "Order #"':
+                      - generic: "Order #"
+                    - columnheader "Order status":
+                      - generic: Order status
+                    - columnheader "Payment status":
+                      - generic: Payment status
+                    - columnheader "Shipping status":
+                      - generic: Shipping status
+                    - columnheader "Customer":
+                      - generic: Customer
+                    - columnheader "Created on":
+                      - generic: Created on
+                    - columnheader "Order total":
+                      - generic: Order total
+                    - columnheader "View":
+                      - generic: View
+                - rowgroup [ref=e333]:
+                  - row "Loading..." [ref=e334]:
+                    - cell "Loading..." [ref=e335]
+              - table [ref=e338]:
+                - rowgroup [ref=e339]:
+                  - row [ref=e340]:
+                    - cell [ref=e341]
+                    - cell [ref=e342]
+                    - cell [ref=e343]
+                    - cell [ref=e344]
+                    - cell [ref=e345]
+                    - cell [ref=e346]
+                    - cell [ref=e347]
+                    - cell [ref=e348]
+                    - cell [ref=e349]
+            - generic [ref=e361]:
+              - generic:
+                - navigation "pagination"
+              - generic [ref=e363]:
+                - text: Show
+                - combobox "Show items" [ref=e364]:
+                  - option "7"
+                  - option "15" [selected]
+                  - option "20"
+                  - option "50"
+                  - option "100"
+                - text: items
+              - status
+              - button [ref=e366] [cursor=pointer]
+    - generic [ref=e372]:
+      - generic [ref=e373]:
+        - text: Powered by
+        - link "nopCommerce" [ref=e374] [cursor=pointer]:
+          - /url: https://www.nopcommerce.com/?utm_source=admin-panel&utm_medium=footer&utm_campaign=admin-panel
+      - generic [ref=e375]: Thursday, June 25, 2026 11:55 PM
+      - generic [ref=e376]: nopCommerce version 5.00.0
+  - status [ref=e377]

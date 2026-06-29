@@ -1,0 +1,227 @@
+- generic [active] [ref=e1]:
+  - status
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - link "Administration" [ref=e4] [cursor=pointer]:
+        - /url: /Admin
+    - banner [ref=e5]:
+      - link "Skip navigation" [ref=e6] [cursor=pointer]:
+        - /url: "#main"
+      - list [ref=e11]:
+        - listitem [ref=e12]:
+          - link "My account" [ref=e13] [cursor=pointer]:
+            - /url: /customer/info
+        - listitem [ref=e14]:
+          - link "Log out" [ref=e15] [cursor=pointer]:
+            - /url: /logout
+        - listitem [ref=e16]:
+          - link "Wishlist (0)" [ref=e17] [cursor=pointer]:
+            - /url: /wishlist
+            - generic [ref=e18]: Wishlist
+            - generic [ref=e19]: (0)
+        - listitem [ref=e20]:
+          - link "Shopping cart (1)" [ref=e21] [cursor=pointer]:
+            - /url: /cart
+            - generic [ref=e22]: Shopping cart
+            - generic [ref=e23]: (1)
+      - generic [ref=e24]:
+        - link "Your store name" [ref=e26] [cursor=pointer]:
+          - /url: /
+          - img "Your store name" [ref=e27]
+        - search [ref=e28]:
+          - generic [ref=e29]:
+            - textbox "Search store" [ref=e30]
+            - button "Search" [ref=e31] [cursor=pointer]
+    - navigation [ref=e33]:
+      - button "Categories" [ref=e34] [cursor=pointer]
+      - menu "Categories":
+        - menuitem "Computers" [ref=e35]:
+          - button "Computers" [ref=e37] [cursor=pointer]
+          - menu "Computers":
+            - menuitem "Desktops" [ref=e38]:
+              - button "Desktops" [ref=e39] [cursor=pointer]
+            - menuitem "Notebooks" [ref=e40]:
+              - button "Notebooks" [ref=e41] [cursor=pointer]
+            - menuitem "Software" [ref=e42]:
+              - button "Software" [ref=e43] [cursor=pointer]
+        - menuitem "Electronics" [ref=e44]:
+          - button "Electronics" [ref=e46] [cursor=pointer]
+          - menu "Electronics":
+            - menuitem "Camera & photo" [ref=e47]:
+              - button "Camera & photo" [ref=e48] [cursor=pointer]
+            - menuitem "Cell phones" [ref=e49]:
+              - button "Cell phones" [ref=e50] [cursor=pointer]
+            - menuitem "Others" [ref=e51]:
+              - button "Others" [ref=e52] [cursor=pointer]
+        - menuitem "Apparel" [ref=e53]:
+          - button "Apparel" [ref=e55] [cursor=pointer]
+          - menu "Apparel":
+            - menuitem "Shoes" [ref=e56]:
+              - button "Shoes" [ref=e57] [cursor=pointer]
+            - menuitem "Clothing" [ref=e58]:
+              - button "Clothing" [ref=e59] [cursor=pointer]
+            - menuitem "Accessories" [ref=e60]:
+              - button "Accessories" [ref=e61] [cursor=pointer]
+        - menuitem "Digital downloads" [ref=e62]:
+          - button "Digital downloads" [ref=e63] [cursor=pointer]
+        - menuitem "Books" [ref=e64]:
+          - button "Books" [ref=e65] [cursor=pointer]
+        - menuitem "Jewelry" [ref=e66]:
+          - button "Jewelry" [ref=e67] [cursor=pointer]
+        - menuitem "Gift Cards" [ref=e68]:
+          - button "Gift Cards" [ref=e69] [cursor=pointer]
+    - main [ref=e70]:
+      - generic [ref=e73]:
+        - heading "Shopping cart" [level=1] [ref=e75]
+        - generic [ref=e78]:
+          - table [ref=e80]:
+            - rowgroup [ref=e81]:
+              - 'row "SKU: M8_HTC_5L Picture of HTC smartphone HTC smartphone Price: $245.00 Qty.: 1 Total: $245.00" [ref=e82]':
+                - 'cell "SKU: M8_HTC_5L" [ref=e83]'
+                - cell "Picture of HTC smartphone" [ref=e84]:
+                  - link "Picture of HTC smartphone" [ref=e85] [cursor=pointer]:
+                    - /url: /htc-smartphone
+                    - img "Picture of HTC smartphone" [ref=e86]
+                - cell "HTC smartphone" [ref=e87]:
+                  - link "HTC smartphone" [ref=e88] [cursor=pointer]:
+                    - /url: /htc-smartphone
+                - 'cell "Price: $245.00" [ref=e89]'
+                - 'cell "Qty.: 1" [ref=e90]':
+                  - text: "Qty.:"
+                  - textbox "Qty." [ref=e93]: "1"
+                - 'cell "Total: $245.00" [ref=e95]'
+                - cell [ref=e96]:
+                  - button "Remove" [ref=e97] [cursor=pointer]
+          - generic [ref=e98]:
+            - generic [ref=e99]:
+              - button "Continue shopping" [ref=e100] [cursor=pointer]
+              - link "Estimate shipping" [ref=e101] [cursor=pointer]:
+                - /url: "#estimate-shipping-popup"
+            - generic [ref=e103]:
+              - term [ref=e104]: Gift wrapping *
+              - definition [ref=e105]:
+                - combobox "Gift wrapping" [ref=e106]:
+                  - option "No" [selected]
+                  - option "Yes [+$10.00]"
+          - generic [ref=e107]:
+            - generic [ref=e109]:
+              - generic [ref=e110]:
+                - heading "Discount Code" [level=2] [ref=e111]
+                - generic [ref=e112]: Enter your coupon here
+                - generic [ref=e113]:
+                  - textbox "Enter discount coupon code" [ref=e114]
+                  - button "Apply coupon" [ref=e115] [cursor=pointer]
+              - generic [ref=e116]:
+                - heading "Gift Cards" [level=2] [ref=e117]
+                - generic [ref=e118]: Enter gift card code
+                - generic [ref=e119]:
+                  - textbox "Enter gift card code" [ref=e120]
+                  - button "Add gift card" [ref=e121] [cursor=pointer]
+            - generic [ref=e122]:
+              - table [ref=e124]:
+                - rowgroup [ref=e125]:
+                  - 'row "Sub-Total: $245.00" [ref=e126]':
+                    - cell "Sub-Total:" [ref=e127]
+                    - cell "$245.00" [ref=e128]
+                  - 'row "Shipping: Calculated during checkout" [ref=e129]':
+                    - cell "Shipping:" [ref=e130]
+                    - cell "Calculated during checkout" [ref=e131]
+                  - 'row "Tax: $0.00" [ref=e132]':
+                    - cell "Tax:" [ref=e133]
+                    - cell "$0.00" [ref=e134]
+                  - 'row "Total: Calculated during checkout" [ref=e135]':
+                    - cell "Total:" [ref=e136]
+                    - cell "Calculated during checkout" [ref=e137]
+              - generic [ref=e138]:
+                - checkbox "I agree with the terms of service and I adhere to them unconditionally" [ref=e139]
+                - text: I agree with the terms of service and I adhere to them unconditionally
+                - button "(read)" [ref=e140] [cursor=pointer]
+              - button "Checkout" [ref=e142] [cursor=pointer]
+    - contentinfo [ref=e143]:
+      - generic [ref=e144]:
+        - navigation [ref=e145]:
+          - heading "Information" [level=2] [ref=e146] [cursor=pointer]
+          - menu "Information":
+            - menuitem "Sitemap" [ref=e147]:
+              - link "Sitemap" [ref=e148] [cursor=pointer]:
+                - /url: /sitemap
+            - menuitem "Shipping & returns" [ref=e149]:
+              - link "Shipping & returns" [ref=e150] [cursor=pointer]:
+                - /url: /shipping-returns
+            - menuitem "Privacy notice" [ref=e151]:
+              - link "Privacy notice" [ref=e152] [cursor=pointer]:
+                - /url: /privacy-notice
+            - menuitem "Conditions of Use" [ref=e153]:
+              - link "Conditions of Use" [ref=e154] [cursor=pointer]:
+                - /url: /conditions-of-use
+            - menuitem "About us" [ref=e155]:
+              - link "About us" [ref=e156] [cursor=pointer]:
+                - /url: /about-us
+            - menuitem "Contact us" [ref=e157]:
+              - link "Contact us" [ref=e158] [cursor=pointer]:
+                - /url: /contactus
+          - heading "Customer service" [level=2] [ref=e159] [cursor=pointer]
+          - menu "Customer service":
+            - menuitem "Search" [ref=e160]:
+              - link "Search" [ref=e161] [cursor=pointer]:
+                - /url: /search
+            - menuitem "Blog" [ref=e162]:
+              - link "Blog" [ref=e163] [cursor=pointer]:
+                - /url: /blog
+            - menuitem "Recently viewed products" [ref=e164]:
+              - link "Recently viewed products" [ref=e165] [cursor=pointer]:
+                - /url: /recentlyviewedproducts
+            - menuitem "Compare products list" [ref=e166]:
+              - link "Compare products list" [ref=e167] [cursor=pointer]:
+                - /url: /compareproducts
+            - menuitem "New products" [ref=e168]:
+              - link "New products" [ref=e169] [cursor=pointer]:
+                - /url: /newproducts
+          - heading "My account" [level=2] [ref=e170] [cursor=pointer]
+          - menu "My account":
+            - menuitem "My account" [ref=e171]:
+              - link "My account" [ref=e172] [cursor=pointer]:
+                - /url: /customer/info
+            - menuitem "Orders" [ref=e173]:
+              - link "Orders" [ref=e174] [cursor=pointer]:
+                - /url: /order/history
+            - menuitem "Addresses" [ref=e175]:
+              - link "Addresses" [ref=e176] [cursor=pointer]:
+                - /url: /customer/addresses
+            - menuitem "Shopping cart" [ref=e177]:
+              - link "Shopping cart" [ref=e178] [cursor=pointer]:
+                - /url: /cart
+            - menuitem "Wishlist" [ref=e179]:
+              - link "Wishlist" [ref=e180] [cursor=pointer]:
+                - /url: /wishlist
+            - menuitem "Apply for vendor account" [ref=e181]:
+              - link "Apply for vendor account" [ref=e182] [cursor=pointer]:
+                - /url: /vendor/apply
+        - generic [ref=e183]:
+          - generic [ref=e184]:
+            - heading "Follow us" [level=2] [ref=e185]
+            - list [ref=e186]:
+              - listitem [ref=e187]:
+                - link "Facebook" [ref=e188] [cursor=pointer]:
+                  - /url: https://www.facebook.com/nopCommerce
+              - listitem [ref=e189]:
+                - link "X" [ref=e190] [cursor=pointer]:
+                  - /url: https://x.com/nopCommerce
+              - listitem [ref=e191]:
+                - link "YouTube" [ref=e192] [cursor=pointer]:
+                  - /url: https://www.youtube.com/user/nopCommerce
+              - listitem [ref=e193]:
+                - link "Instagram" [ref=e194] [cursor=pointer]:
+                  - /url: https://www.instagram.com/nopcommerce_official
+          - form [ref=e195]:
+            - heading "Newsletter" [level=2] [ref=e196]
+            - generic [ref=e198]:
+              - textbox "Sign up for our newsletter" [ref=e199]:
+                - /placeholder: Enter your email here...
+              - button "Subscribe" [ref=e200] [cursor=pointer]
+      - generic [ref=e201]:
+        - generic [ref=e202]: Copyright © 2026 Your store name. All rights reserved.
+        - generic [ref=e203]:
+          - text: Powered by
+          - link "nopCommerce" [ref=e204] [cursor=pointer]:
+            - /url: https://www.nopcommerce.com/

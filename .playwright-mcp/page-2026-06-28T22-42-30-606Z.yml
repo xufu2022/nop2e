@@ -1,0 +1,170 @@
+- generic [active] [ref=e1]:
+  - status
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - link "Administration" [ref=e4] [cursor=pointer]:
+        - /url: /Admin
+    - banner [ref=e5]:
+      - link "Skip navigation" [ref=e6] [cursor=pointer]:
+        - /url: "#main"
+      - list [ref=e11]:
+        - listitem [ref=e12]:
+          - link "My account" [ref=e13] [cursor=pointer]:
+            - /url: /customer/info
+        - listitem [ref=e14]:
+          - link "Log out" [ref=e15] [cursor=pointer]:
+            - /url: /logout
+        - listitem [ref=e16]:
+          - link "Wishlist (0)" [ref=e17] [cursor=pointer]:
+            - /url: /wishlist
+            - generic [ref=e18]: Wishlist
+            - generic [ref=e19]: (0)
+        - listitem [ref=e20]:
+          - link "Shopping cart (5)" [ref=e21] [cursor=pointer]:
+            - /url: /cart
+            - generic [ref=e22]: Shopping cart
+            - generic [ref=e23]: (5)
+      - generic [ref=e24]:
+        - link "Your store name" [ref=e26] [cursor=pointer]:
+          - /url: /
+          - img "Your store name" [ref=e27]
+        - search [ref=e28]:
+          - generic [ref=e29]:
+            - textbox "Search store" [ref=e30]
+            - button "Search" [ref=e31] [cursor=pointer]
+    - navigation [ref=e33]:
+      - button "Categories" [ref=e34] [cursor=pointer]
+      - menu "Categories":
+        - menuitem "Computers" [ref=e35]:
+          - button "Computers" [ref=e37] [cursor=pointer]
+          - menu "Computers":
+            - menuitem "Desktops" [ref=e38]:
+              - button "Desktops" [ref=e39] [cursor=pointer]
+            - menuitem "Notebooks" [ref=e40]:
+              - button "Notebooks" [ref=e41] [cursor=pointer]
+            - menuitem "Software" [ref=e42]:
+              - button "Software" [ref=e43] [cursor=pointer]
+        - menuitem "Electronics" [ref=e44]:
+          - button "Electronics" [ref=e46] [cursor=pointer]
+          - menu "Electronics":
+            - menuitem "Camera & photo" [ref=e47]:
+              - button "Camera & photo" [ref=e48] [cursor=pointer]
+            - menuitem "Cell phones" [ref=e49]:
+              - button "Cell phones" [ref=e50] [cursor=pointer]
+            - menuitem "Others" [ref=e51]:
+              - button "Others" [ref=e52] [cursor=pointer]
+        - menuitem "Apparel" [ref=e53]:
+          - button "Apparel" [ref=e55] [cursor=pointer]
+          - menu "Apparel":
+            - menuitem "Shoes" [ref=e56]:
+              - button "Shoes" [ref=e57] [cursor=pointer]
+            - menuitem "Clothing" [ref=e58]:
+              - button "Clothing" [ref=e59] [cursor=pointer]
+            - menuitem "Accessories" [ref=e60]:
+              - button "Accessories" [ref=e61] [cursor=pointer]
+        - menuitem "Digital downloads" [ref=e62]:
+          - button "Digital downloads" [ref=e63] [cursor=pointer]
+        - menuitem "Books" [ref=e64]:
+          - button "Books" [ref=e65] [cursor=pointer]
+        - menuitem "Jewelry" [ref=e66]:
+          - button "Jewelry" [ref=e67] [cursor=pointer]
+        - menuitem "Gift Cards" [ref=e68]:
+          - button "Gift Cards" [ref=e69] [cursor=pointer]
+    - main [ref=e70]:
+      - generic [ref=e73]:
+        - heading "Password recovery" [level=1] [ref=e75]
+        - generic [ref=e77]:
+          - paragraph [ref=e78]: Please enter your email address below. You will receive a link to reset your password.
+          - generic [ref=e81]:
+            - generic [ref=e83]: "Your email address:"
+            - textbox "Your email address:" [ref=e84]
+            - text: "*"
+          - button "Recover" [ref=e86] [cursor=pointer]
+    - contentinfo [ref=e87]:
+      - generic [ref=e88]:
+        - navigation [ref=e89]:
+          - heading "Information" [level=2] [ref=e90] [cursor=pointer]
+          - menu "Information":
+            - menuitem "Sitemap" [ref=e91]:
+              - link "Sitemap" [ref=e92] [cursor=pointer]:
+                - /url: /sitemap
+            - menuitem "Shipping & returns" [ref=e93]:
+              - link "Shipping & returns" [ref=e94] [cursor=pointer]:
+                - /url: /shipping-returns
+            - menuitem "Privacy notice" [ref=e95]:
+              - link "Privacy notice" [ref=e96] [cursor=pointer]:
+                - /url: /privacy-notice
+            - menuitem "Conditions of Use" [ref=e97]:
+              - link "Conditions of Use" [ref=e98] [cursor=pointer]:
+                - /url: /conditions-of-use
+            - menuitem "About us" [ref=e99]:
+              - link "About us" [ref=e100] [cursor=pointer]:
+                - /url: /about-us
+            - menuitem "Contact us" [ref=e101]:
+              - link "Contact us" [ref=e102] [cursor=pointer]:
+                - /url: /contactus
+          - heading "Customer service" [level=2] [ref=e103] [cursor=pointer]
+          - menu "Customer service":
+            - menuitem "Search" [ref=e104]:
+              - link "Search" [ref=e105] [cursor=pointer]:
+                - /url: /search
+            - menuitem "Blog" [ref=e106]:
+              - link "Blog" [ref=e107] [cursor=pointer]:
+                - /url: /blog
+            - menuitem "Recently viewed products" [ref=e108]:
+              - link "Recently viewed products" [ref=e109] [cursor=pointer]:
+                - /url: /recentlyviewedproducts
+            - menuitem "Compare products list" [ref=e110]:
+              - link "Compare products list" [ref=e111] [cursor=pointer]:
+                - /url: /compareproducts
+            - menuitem "New products" [ref=e112]:
+              - link "New products" [ref=e113] [cursor=pointer]:
+                - /url: /newproducts
+          - heading "My account" [level=2] [ref=e114] [cursor=pointer]
+          - menu "My account":
+            - menuitem "My account" [ref=e115]:
+              - link "My account" [ref=e116] [cursor=pointer]:
+                - /url: /customer/info
+            - menuitem "Orders" [ref=e117]:
+              - link "Orders" [ref=e118] [cursor=pointer]:
+                - /url: /order/history
+            - menuitem "Addresses" [ref=e119]:
+              - link "Addresses" [ref=e120] [cursor=pointer]:
+                - /url: /customer/addresses
+            - menuitem "Shopping cart" [ref=e121]:
+              - link "Shopping cart" [ref=e122] [cursor=pointer]:
+                - /url: /cart
+            - menuitem "Wishlist" [ref=e123]:
+              - link "Wishlist" [ref=e124] [cursor=pointer]:
+                - /url: /wishlist
+            - menuitem "Apply for vendor account" [ref=e125]:
+              - link "Apply for vendor account" [ref=e126] [cursor=pointer]:
+                - /url: /vendor/apply
+        - generic [ref=e127]:
+          - generic [ref=e128]:
+            - heading "Follow us" [level=2] [ref=e129]
+            - list [ref=e130]:
+              - listitem [ref=e131]:
+                - link "Facebook" [ref=e132] [cursor=pointer]:
+                  - /url: https://www.facebook.com/nopCommerce
+              - listitem [ref=e133]:
+                - link "X" [ref=e134] [cursor=pointer]:
+                  - /url: https://x.com/nopCommerce
+              - listitem [ref=e135]:
+                - link "YouTube" [ref=e136] [cursor=pointer]:
+                  - /url: https://www.youtube.com/user/nopCommerce
+              - listitem [ref=e137]:
+                - link "Instagram" [ref=e138] [cursor=pointer]:
+                  - /url: https://www.instagram.com/nopcommerce_official
+          - form [ref=e139]:
+            - heading "Newsletter" [level=2] [ref=e140]
+            - generic [ref=e142]:
+              - textbox "Sign up for our newsletter" [ref=e143]:
+                - /placeholder: Enter your email here...
+              - button "Subscribe" [ref=e144] [cursor=pointer]
+      - generic [ref=e145]:
+        - generic [ref=e146]: Copyright © 2026 Your store name. All rights reserved.
+        - generic [ref=e147]:
+          - text: Powered by
+          - link "nopCommerce" [ref=e148] [cursor=pointer]:
+            - /url: https://www.nopcommerce.com/

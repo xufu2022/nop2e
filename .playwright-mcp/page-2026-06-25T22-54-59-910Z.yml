@@ -1,0 +1,235 @@
+- generic [ref=e4]:
+  - navigation [ref=e5]:
+    - list [ref=e6]:
+      - listitem [ref=e7]:
+        - link [ref=e8] [cursor=pointer]:
+          - /url: "#"
+    - link [ref=e10] [cursor=pointer]:
+      - /url: /Admin
+    - list [ref=e12]:
+      - listitem
+      - listitem [ref=e13]:
+        - link "John Smith":
+          - /url: "#"
+      - listitem [ref=e14]:
+        - link "Logout" [ref=e15] [cursor=pointer]:
+          - /url: /logout
+      - listitem
+      - listitem [ref=e16]:
+        - link "Public store" [ref=e17] [cursor=pointer]:
+          - /url: /
+      - listitem [ref=e18]:
+        - link [ref=e19] [cursor=pointer]:
+          - /url: "#"
+  - complementary [ref=e21]:
+    - link "logo.png" [ref=e22] [cursor=pointer]:
+      - /url: /Admin
+      - img "logo.png" [ref=e23]
+    - navigation [ref=e25]:
+      - menu [ref=e26]:
+        - listitem [ref=e27]:
+          - link "Dashboard" [ref=e28] [cursor=pointer]:
+            - /url: /Admin
+            - paragraph [ref=e30]: Dashboard
+        - listitem [ref=e31]:
+          - link "Catalog" [ref=e32] [cursor=pointer]:
+            - /url: "#"
+            - paragraph [ref=e34]: Catalog
+          - list [ref=e36]:
+            - listitem [ref=e37]:
+              - link "Products" [ref=e38] [cursor=pointer]:
+                - /url: /Admin/Product/List
+                - paragraph [ref=e40]: Products
+            - listitem [ref=e41]:
+              - link "Categories" [ref=e42] [cursor=pointer]:
+                - /url: /Admin/Category/List
+                - paragraph [ref=e44]: Categories
+            - listitem [ref=e45]:
+              - link "Manufacturers" [ref=e46] [cursor=pointer]:
+                - /url: /Admin/Manufacturer/List
+                - paragraph [ref=e48]: Manufacturers
+            - listitem [ref=e49]:
+              - link "Product reviews" [ref=e50] [cursor=pointer]:
+                - /url: /Admin/ProductReview/List
+                - paragraph [ref=e52]: Product reviews
+            - listitem [ref=e53]:
+              - link "Product tags" [ref=e54] [cursor=pointer]:
+                - /url: /Admin/Product/ProductTags
+                - paragraph [ref=e56]: Product tags
+            - listitem [ref=e57]:
+              - link "Attributes" [ref=e58] [cursor=pointer]:
+                - /url: "#"
+                - paragraph [ref=e60]: Attributes
+            - listitem [ref=e62]:
+              - link "Price lists" [ref=e63] [cursor=pointer]:
+                - /url: /Admin/PriceList/List
+                - paragraph [ref=e65]: Price lists
+        - listitem [ref=e66]:
+          - link "Sales" [ref=e67] [cursor=pointer]:
+            - /url: "#"
+            - paragraph [ref=e69]: Sales
+        - listitem [ref=e71]:
+          - link "Customers" [ref=e72] [cursor=pointer]:
+            - /url: "#"
+            - paragraph [ref=e74]: Customers
+        - listitem [ref=e76]:
+          - link "Promotions" [ref=e77] [cursor=pointer]:
+            - /url: "#"
+            - paragraph [ref=e79]: Promotions
+        - listitem [ref=e81]:
+          - link "Content management" [ref=e82] [cursor=pointer]:
+            - /url: "#"
+            - paragraph [ref=e84]: Content management
+        - listitem [ref=e86]:
+          - link "Configuration" [ref=e87] [cursor=pointer]:
+            - /url: "#"
+            - paragraph [ref=e89]: Configuration
+        - listitem [ref=e91]:
+          - link "System" [ref=e92] [cursor=pointer]:
+            - /url: "#"
+            - paragraph [ref=e94]: System
+        - listitem [ref=e96]:
+          - link "Reports" [ref=e97] [cursor=pointer]:
+            - /url: "#"
+            - paragraph [ref=e99]: Reports
+        - listitem [ref=e101]:
+          - link "Help" [ref=e102] [cursor=pointer]:
+            - /url: "#"
+            - paragraph [ref=e104]: Help
+  - generic [ref=e107]:
+    - generic [ref=e108]:
+      - heading "Products" [level=1] [ref=e109]
+      - generic [ref=e110]:
+        - link "Add new" [ref=e111] [cursor=pointer]:
+          - /url: /Admin/Product/Create
+          - text: Add new
+        - link "Bulk edit products" [ref=e113] [cursor=pointer]:
+          - /url: /Admin/Product/BulkEdit
+          - text: Bulk edit products
+        - button "Download catalog as PDF" [ref=e115] [cursor=pointer]: Download catalog as PDF
+        - generic [ref=e117]:
+          - button "Export" [ref=e118] [cursor=pointer]: Export
+          - button [ref=e120] [cursor=pointer]
+        - button "Import" [ref=e122] [cursor=pointer]: Import
+        - button "Delete (selected)" [ref=e124] [cursor=pointer]: Delete (selected)
+    - generic [ref=e129]:
+      - generic [ref=e131]:
+        - generic [ref=e133] [cursor=pointer]: Search
+        - generic [ref=e138]:
+          - generic [ref=e139]:
+            - generic [ref=e140]:
+              - generic [ref=e141]:
+                - generic [ref=e144]: Product name
+                - textbox "Product name" [ref=e146]
+              - generic [ref=e147]:
+                - generic [ref=e150]: Category
+                - generic [ref=e152]:
+                  - combobox [ref=e153]
+                  - combobox "All" [ref=e156] [cursor=pointer]:
+                    - textbox "All" [ref=e157]
+              - generic [ref=e158]:
+                - generic [ref=e161]: Search subcategories
+                - checkbox "Search subcategories" [ref=e163]
+              - generic [ref=e164]:
+                - generic [ref=e167]: Manufacturer
+                - generic [ref=e169]:
+                  - combobox [ref=e170]
+                  - combobox "All" [ref=e173] [cursor=pointer]:
+                    - textbox "All" [ref=e174]
+              - generic [ref=e175]:
+                - generic [ref=e178]: Vendor
+                - generic [ref=e180]:
+                  - combobox [ref=e181]
+                  - combobox "All" [ref=e184] [cursor=pointer]:
+                    - textbox "All" [ref=e185]
+            - generic [ref=e186]:
+              - generic [ref=e187]:
+                - generic [ref=e190]: Warehouse
+                - generic [ref=e192]:
+                  - combobox [ref=e193]
+                  - combobox "All" [ref=e196] [cursor=pointer]:
+                    - textbox "All" [ref=e197]
+              - generic [ref=e198]:
+                - generic [ref=e201]: Product type
+                - generic [ref=e203]:
+                  - combobox [ref=e204]
+                  - combobox "All" [ref=e207] [cursor=pointer]:
+                    - textbox "All" [ref=e208]
+              - generic [ref=e209]:
+                - generic [ref=e212]: Published
+                - generic [ref=e214]:
+                  - combobox [ref=e215]
+                  - combobox "All" [ref=e218] [cursor=pointer]:
+                    - textbox "All" [ref=e219]
+              - generic [ref=e220]:
+                - generic [ref=e223]: Go directly to product SKU
+                - generic [ref=e225]:
+                  - textbox "Go directly to product SKU" [ref=e226]
+                  - button "Go" [ref=e228] [cursor=pointer]
+          - button "Search" [ref=e231] [cursor=pointer]: Search
+      - generic [ref=e234]:
+        - generic [ref=e236]:
+          - text: Learn more about
+          - link "products" [ref=e237] [cursor=pointer]:
+            - /url: https://docs.nopcommerce.com/running-your-store/catalog/products/index.html?utm_source=admin-panel&utm_medium=admin-page&utm_campaign=documentation&utm_content=doc-reference
+        - generic [ref=e238]:
+          - generic [ref=e241]:
+            - status [ref=e242]
+            - table [ref=e246]:
+              - rowgroup [ref=e247]:
+                - row "Picture Product name SKU Price Stock quantity Published Edit" [ref=e248]:
+                  - columnheader [ref=e249]:
+                    - checkbox [ref=e251]
+                  - columnheader "Picture" [ref=e252]
+                  - columnheader "Product name" [ref=e253]
+                  - columnheader "SKU" [ref=e254]
+                  - columnheader "Price" [ref=e255]
+                  - columnheader "Stock quantity" [ref=e256]
+                  - columnheader "Published" [ref=e257]
+                  - columnheader "Edit" [ref=e258]
+            - table [ref=e269]:
+              - rowgroup:
+                - row "Picture Product name SKU Price Stock quantity Published Edit":
+                  - columnheader:
+                    - checkbox [ref=e280]
+                  - columnheader "Picture":
+                    - generic: Picture
+                  - columnheader "Product name":
+                    - generic: Product name
+                  - columnheader "SKU":
+                    - generic: SKU
+                  - columnheader "Price":
+                    - generic: Price
+                  - columnheader "Stock quantity":
+                    - generic: Stock quantity
+                  - columnheader "Published":
+                    - generic: Published
+                  - columnheader "Edit":
+                    - generic: Edit
+              - rowgroup [ref=e281]:
+                - row "Loading..." [ref=e282]:
+                  - cell "Loading..." [ref=e283]
+            - generic:
+              - generic:
+                - table
+          - generic [ref=e285]:
+            - generic:
+              - navigation "pagination"
+            - generic [ref=e287]:
+              - text: Show
+              - combobox "Show items" [ref=e288]:
+                - option "7"
+                - option "15" [selected]
+                - option "20"
+                - option "50"
+                - option "100"
+              - text: items
+            - status
+            - button [ref=e290] [cursor=pointer]
+  - generic [ref=e296]:
+    - generic [ref=e297]:
+      - text: Powered by
+      - link "nopCommerce" [ref=e298] [cursor=pointer]:
+        - /url: https://www.nopcommerce.com/?utm_source=admin-panel&utm_medium=footer&utm_campaign=admin-panel
+    - generic [ref=e299]: Thursday, June 25, 2026 11:54 PM
+    - generic [ref=e300]: nopCommerce version 5.00.0

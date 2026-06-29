@@ -1,0 +1,333 @@
+- generic [active] [ref=e1]:
+  - status
+  - generic [ref=e2]:
+    - navigation [ref=e3]:
+      - link "Administration" [ref=e4] [cursor=pointer]:
+        - /url: /Admin
+      - link "Manage this page" [ref=e5] [cursor=pointer]:
+        - /url: /Admin/Product/Edit/20
+    - banner [ref=e6]:
+      - link "Skip navigation" [ref=e7] [cursor=pointer]:
+        - /url: "#main"
+      - list [ref=e12]:
+        - listitem [ref=e13]:
+          - link "My account" [ref=e14] [cursor=pointer]:
+            - /url: /customer/info
+        - listitem [ref=e15]:
+          - link "Log out" [ref=e16] [cursor=pointer]:
+            - /url: /logout
+        - listitem [ref=e17]:
+          - link "Wishlist (0)" [ref=e18] [cursor=pointer]:
+            - /url: /wishlist
+            - generic [ref=e19]: Wishlist
+            - generic [ref=e20]: (0)
+        - listitem [ref=e21]:
+          - link "Shopping cart (5)" [ref=e22] [cursor=pointer]:
+            - /url: /cart
+            - generic [ref=e23]: Shopping cart
+            - generic [ref=e24]: (5)
+      - generic [ref=e25]:
+        - link "Your store name" [ref=e27] [cursor=pointer]:
+          - /url: /
+          - img "Your store name" [ref=e28]
+        - search [ref=e29]:
+          - generic [ref=e30]:
+            - textbox "Search store" [ref=e31]
+            - button "Search" [ref=e32] [cursor=pointer]
+    - navigation [ref=e34]:
+      - button "Categories" [ref=e35] [cursor=pointer]
+      - menu "Categories":
+        - menuitem "Computers" [ref=e36]:
+          - button "Computers" [ref=e38] [cursor=pointer]
+          - menu "Computers":
+            - menuitem "Desktops" [ref=e39]:
+              - button "Desktops" [ref=e40] [cursor=pointer]
+            - menuitem "Notebooks" [ref=e41]:
+              - button "Notebooks" [ref=e42] [cursor=pointer]
+            - menuitem "Software" [ref=e43]:
+              - button "Software" [ref=e44] [cursor=pointer]
+        - menuitem "Electronics" [ref=e45]:
+          - button "Electronics" [ref=e47] [cursor=pointer]
+          - menu "Electronics":
+            - menuitem "Camera & photo" [ref=e48]:
+              - button "Camera & photo" [ref=e49] [cursor=pointer]
+            - menuitem "Cell phones" [ref=e50]:
+              - button "Cell phones" [ref=e51] [cursor=pointer]
+            - menuitem "Others" [ref=e52]:
+              - button "Others" [ref=e53] [cursor=pointer]
+        - menuitem "Apparel" [ref=e54]:
+          - button "Apparel" [ref=e56] [cursor=pointer]
+          - menu "Apparel":
+            - menuitem "Shoes" [ref=e57]:
+              - button "Shoes" [ref=e58] [cursor=pointer]
+            - menuitem "Clothing" [ref=e59]:
+              - button "Clothing" [ref=e60] [cursor=pointer]
+            - menuitem "Accessories" [ref=e61]:
+              - button "Accessories" [ref=e62] [cursor=pointer]
+        - menuitem "Digital downloads" [ref=e63]:
+          - button "Digital downloads" [ref=e64] [cursor=pointer]
+        - menuitem "Books" [ref=e65]:
+          - button "Books" [ref=e66] [cursor=pointer]
+        - menuitem "Jewelry" [ref=e67]:
+          - button "Jewelry" [ref=e68] [cursor=pointer]
+        - menuitem "Gift Cards" [ref=e69]:
+          - button "Gift Cards" [ref=e70] [cursor=pointer]
+    - main [ref=e71]:
+      - generic [ref=e72]:
+        - list [ref=e74]:
+          - listitem [ref=e75]:
+            - link "Home" [ref=e77] [cursor=pointer]:
+              - /url: /
+              - generic [ref=e78]: Home
+            - generic [ref=e79]: /
+          - listitem [ref=e80]:
+            - link "Electronics" [ref=e81] [cursor=pointer]:
+              - /url: /electronics
+              - generic [ref=e82]: Electronics
+            - generic [ref=e83]: /
+          - listitem [ref=e84]:
+            - link "Cell phones" [ref=e85] [cursor=pointer]:
+              - /url: /cell-phones
+              - generic [ref=e86]: Cell phones
+            - generic [ref=e87]: /
+          - listitem [ref=e88]:
+            - strong [ref=e89]: Nokia Lumia 1020
+        - generic [ref=e92]:
+          - article [ref=e94]:
+            - generic [ref=e95]:
+              - img "Picture of Nokia Lumia 1020" [ref=e99]
+              - generic [ref=e100]:
+                - heading "Nokia Lumia 1020" [level=1] [ref=e102]
+                - generic [ref=e103]: Nokia Lumia 1020 4G Cell Phone (Unlocked)
+                - generic [ref=e104]:
+                  - link "1 review(s)" [ref=e109] [cursor=pointer]:
+                    - /url: "#productreviews"
+                  - generic [ref=e110]:
+                    - text: "|"
+                    - link "Add your review" [ref=e111] [cursor=pointer]:
+                      - /url: "#addreview"
+                - generic [ref=e113]: "Availability: In stock"
+                - generic [ref=e115]: "SKU: N_1020_LU"
+                - generic [ref=e117]: $349.00
+                - generic [ref=e119]:
+                  - textbox "Enter a quantity" [ref=e120]: "1"
+                  - button "Add to cart" [ref=e121] [cursor=pointer]
+                - link "Shipping:" [ref=e123] [cursor=pointer]:
+                  - /url: "#estimate-shipping-popup-20"
+                  - generic [ref=e124]: "Shipping:"
+                - generic [ref=e126]:
+                  - button "Add to wishlist" [ref=e128] [cursor=pointer]
+                  - button "Add to compare list" [ref=e130] [cursor=pointer]
+                  - button "Email a friend" [ref=e132] [cursor=pointer]
+              - paragraph [ref=e134]: Capture special moments for friends and family with this Nokia Lumia 1020 32GB WHITE cell phone that features an easy-to-use 41.0MP rear-facing camera and a 1.2MP front-facing camera. The AMOLED touch screen offers 768 x 1280 resolution for crisp visuals.
+            - generic [ref=e136]:
+              - heading "Product tags" [level=2] [ref=e137]
+              - list [ref=e139]:
+                - listitem [ref=e140]:
+                  - link "awesome" [ref=e141] [cursor=pointer]:
+                    - /url: /awesome
+                  - text: (18)
+                - listitem [ref=e142]: ","
+                - listitem [ref=e143]:
+                  - link "cool" [ref=e144] [cursor=pointer]:
+                    - /url: /cool
+                  - text: (18)
+                - listitem [ref=e145]: ","
+                - listitem [ref=e146]:
+                  - link "camera" [ref=e147] [cursor=pointer]:
+                    - /url: /camera
+                  - text: (3)
+            - generic [ref=e148]:
+              - heading "Related products" [level=2] [ref=e149]
+              - generic [ref=e150]:
+                - article [ref=e152]:
+                  - link "Picture of HTC smartphone" [ref=e154] [cursor=pointer]:
+                    - /url: /htc-smartphone
+                    - img "Picture of HTC smartphone" [ref=e155]
+                  - generic [ref=e156]:
+                    - heading "HTC smartphone" [level=2] [ref=e157]:
+                      - link "HTC smartphone" [ref=e158] [cursor=pointer]:
+                        - /url: /htc-smartphone
+                    - generic "0 review(s)" [ref=e159]
+                    - generic [ref=e161]:
+                      - generic [ref=e162]: $245.00
+                      - generic [ref=e163]:
+                        - button "Add to cart" [ref=e164] [cursor=pointer]
+                        - button "Add to compare list" [ref=e165] [cursor=pointer]
+                        - button "Add to wishlist" [ref=e166] [cursor=pointer]
+                - article [ref=e168]:
+                  - link "Picture of HTC One Mini Blue" [ref=e170] [cursor=pointer]:
+                    - /url: /htc-one-mini-blue
+                    - img "Picture of HTC One Mini Blue" [ref=e171]
+                  - generic [ref=e172]:
+                    - heading "HTC One Mini Blue" [level=2] [ref=e173]:
+                      - link "HTC One Mini Blue" [ref=e174] [cursor=pointer]:
+                        - /url: /htc-one-mini-blue
+                    - generic "0 review(s)" [ref=e175]
+                    - generic [ref=e177]:
+                      - generic [ref=e178]: $100.00
+                      - generic [ref=e179]:
+                        - button "Add to cart" [ref=e180] [cursor=pointer]
+                        - button "Add to compare list" [ref=e181] [cursor=pointer]
+                        - button "Add to wishlist" [ref=e182] [cursor=pointer]
+                - article [ref=e184]:
+                  - link "Picture of Beats Pill Wireless Speaker" [ref=e186] [cursor=pointer]:
+                    - /url: /beats-pill-wireless-speaker
+                    - img "Picture of Beats Pill Wireless Speaker" [ref=e187]
+                  - generic [ref=e188]:
+                    - heading "Beats Pill Wireless Speaker" [level=2] [ref=e189]:
+                      - link "Beats Pill Wireless Speaker" [ref=e190] [cursor=pointer]:
+                        - /url: /beats-pill-wireless-speaker
+                    - generic "0 review(s)" [ref=e191]
+                    - generic [ref=e193]:
+                      - generic [ref=e194]: From $15.00
+                      - generic [ref=e195]:
+                        - button "Add to cart" [ref=e196] [cursor=pointer]
+                        - button "Add to compare list" [ref=e197] [cursor=pointer]
+                        - button "Add to wishlist" [ref=e198] [cursor=pointer]
+                - article [ref=e200]:
+                  - link "Picture of Portable Sound Speakers" [ref=e202] [cursor=pointer]:
+                    - /url: /portable-sound-speakers
+                    - img "Picture of Portable Sound Speakers" [ref=e203]
+                  - generic [ref=e204]:
+                    - heading "Portable Sound Speakers" [level=2] [ref=e205]:
+                      - link "Portable Sound Speakers" [ref=e206] [cursor=pointer]:
+                        - /url: /portable-sound-speakers
+                    - generic "1 review(s)" [ref=e207]
+                    - generic [ref=e210]:
+                      - generic [ref=e211]: $37.00
+                      - generic [ref=e212]:
+                        - button "Add to cart" [ref=e213] [cursor=pointer]
+                        - button "Add to compare list" [ref=e214] [cursor=pointer]
+                        - button "Add to wishlist" [ref=e215] [cursor=pointer]
+          - generic [ref=e216]:
+            - generic [ref=e217]:
+              - heading "Existing reviews" [level=2] [ref=e218]
+              - generic [ref=e219]:
+                - generic [ref=e220]:
+                  - strong [ref=e222]: Some sample review
+                  - generic [ref=e225]: "5"
+                - generic [ref=e226]:
+                  - generic [ref=e228]: This sample review is for the Nokia Lumia 1020. I've been waiting for this product to be available. It is priced just right.
+                  - generic [ref=e229]:
+                    - generic [ref=e230]: "From: John"
+                    - text: "|"
+                    - generic [ref=e231]: "Date: 6/25/2026 5:33 PM"
+                  - generic [ref=e232]:
+                    - text: Was this review helpful?
+                    - generic [ref=e233]:
+                      - generic [ref=e234] [cursor=pointer]: "Yes"
+                      - generic [ref=e235] [cursor=pointer]: "No"
+                    - generic [ref=e236]: (0/0)
+            - generic [ref=e237]:
+              - heading "Write your own review" [level=2] [ref=e238]
+              - generic [ref=e239]:
+                - generic [ref=e241]:
+                  - generic [ref=e242]:
+                    - generic [ref=e244]: "Review title:"
+                    - textbox "Review title:" [ref=e245]
+                    - text: "*"
+                  - generic [ref=e246]:
+                    - generic [ref=e248]: "Review text:"
+                    - textbox "Review text:" [ref=e249]
+                    - text: "*"
+                  - generic [ref=e250]:
+                    - generic [ref=e253]: "Rating:"
+                    - generic [ref=e254]:
+                      - generic [ref=e255]: Bad
+                      - generic [ref=e256]:
+                        - radio "Bad" [ref=e257]
+                        - radio "Not good" [ref=e258]
+                        - radio "Not bad but also not excellent" [ref=e259]
+                        - radio "Good" [ref=e260]
+                        - radio "Excellent" [checked] [ref=e261]
+                      - generic [ref=e262]: Excellent
+                - button "Submit review" [ref=e264] [cursor=pointer]
+    - contentinfo [ref=e265]:
+      - generic [ref=e266]:
+        - navigation [ref=e267]:
+          - heading "Information" [level=2] [ref=e268] [cursor=pointer]
+          - menu "Information":
+            - menuitem "Sitemap" [ref=e269]:
+              - link "Sitemap" [ref=e270] [cursor=pointer]:
+                - /url: /sitemap
+            - menuitem "Shipping & returns" [ref=e271]:
+              - link "Shipping & returns" [ref=e272] [cursor=pointer]:
+                - /url: /shipping-returns
+            - menuitem "Privacy notice" [ref=e273]:
+              - link "Privacy notice" [ref=e274] [cursor=pointer]:
+                - /url: /privacy-notice
+            - menuitem "Conditions of Use" [ref=e275]:
+              - link "Conditions of Use" [ref=e276] [cursor=pointer]:
+                - /url: /conditions-of-use
+            - menuitem "About us" [ref=e277]:
+              - link "About us" [ref=e278] [cursor=pointer]:
+                - /url: /about-us
+            - menuitem "Contact us" [ref=e279]:
+              - link "Contact us" [ref=e280] [cursor=pointer]:
+                - /url: /contactus
+          - heading "Customer service" [level=2] [ref=e281] [cursor=pointer]
+          - menu "Customer service":
+            - menuitem "Search" [ref=e282]:
+              - link "Search" [ref=e283] [cursor=pointer]:
+                - /url: /search
+            - menuitem "Blog" [ref=e284]:
+              - link "Blog" [ref=e285] [cursor=pointer]:
+                - /url: /blog
+            - menuitem "Recently viewed products" [ref=e286]:
+              - link "Recently viewed products" [ref=e287] [cursor=pointer]:
+                - /url: /recentlyviewedproducts
+            - menuitem "Compare products list" [ref=e288]:
+              - link "Compare products list" [ref=e289] [cursor=pointer]:
+                - /url: /compareproducts
+            - menuitem "New products" [ref=e290]:
+              - link "New products" [ref=e291] [cursor=pointer]:
+                - /url: /newproducts
+          - heading "My account" [level=2] [ref=e292] [cursor=pointer]
+          - menu "My account":
+            - menuitem "My account" [ref=e293]:
+              - link "My account" [ref=e294] [cursor=pointer]:
+                - /url: /customer/info
+            - menuitem "Orders" [ref=e295]:
+              - link "Orders" [ref=e296] [cursor=pointer]:
+                - /url: /order/history
+            - menuitem "Addresses" [ref=e297]:
+              - link "Addresses" [ref=e298] [cursor=pointer]:
+                - /url: /customer/addresses
+            - menuitem "Shopping cart" [ref=e299]:
+              - link "Shopping cart" [ref=e300] [cursor=pointer]:
+                - /url: /cart
+            - menuitem "Wishlist" [ref=e301]:
+              - link "Wishlist" [ref=e302] [cursor=pointer]:
+                - /url: /wishlist
+            - menuitem "Apply for vendor account" [ref=e303]:
+              - link "Apply for vendor account" [ref=e304] [cursor=pointer]:
+                - /url: /vendor/apply
+        - generic [ref=e305]:
+          - generic [ref=e306]:
+            - heading "Follow us" [level=2] [ref=e307]
+            - list [ref=e308]:
+              - listitem [ref=e309]:
+                - link "Facebook" [ref=e310] [cursor=pointer]:
+                  - /url: https://www.facebook.com/nopCommerce
+              - listitem [ref=e311]:
+                - link "X" [ref=e312] [cursor=pointer]:
+                  - /url: https://x.com/nopCommerce
+              - listitem [ref=e313]:
+                - link "YouTube" [ref=e314] [cursor=pointer]:
+                  - /url: https://www.youtube.com/user/nopCommerce
+              - listitem [ref=e315]:
+                - link "Instagram" [ref=e316] [cursor=pointer]:
+                  - /url: https://www.instagram.com/nopcommerce_official
+          - form [ref=e317]:
+            - heading "Newsletter" [level=2] [ref=e318]
+            - generic [ref=e320]:
+              - textbox "Sign up for our newsletter" [ref=e321]:
+                - /placeholder: Enter your email here...
+              - button "Subscribe" [ref=e322] [cursor=pointer]
+      - generic [ref=e323]:
+        - generic [ref=e324]: Copyright © 2026 Your store name. All rights reserved.
+        - generic [ref=e325]:
+          - text: Powered by
+          - link "nopCommerce" [ref=e326] [cursor=pointer]:
+            - /url: https://www.nopcommerce.com/
