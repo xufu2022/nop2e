@@ -22,3 +22,6 @@ export const test = base.extend<Fixtures>({
 
 export { expect } from '@playwright/test';
 export { timeouts } from './timeouts';
+
+// Factory re-exports — add one line per new factory file
+export { fakeUser } from '../../utils/factories/user.factory';

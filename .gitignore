@@ -8,5 +8,12 @@ node_modules/
 /playwright/.auth/
 
 # Environment files with credentials — never commit
-envs/.env
+envs/*.env
 envs/*.local.env
+
+# Claude Code local settings and memory — machine-specific
+.claude/settings.local.json
+.claude/projects/
+
+# MCP browser session snapshots — generated during AI-assisted development
+.playwright-mcp/

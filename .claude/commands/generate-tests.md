@@ -5,241 +5,156 @@ description: Use when you have a spec file in docs/specs/ and need to generate P
 
 # generate-tests
 
-Spec-driven Playwright test generation. Processes **one spec file at a time** — reads
-the target `docs/specs/*.md`, clarifies ambiguities in one round-trip, explores the live
-app with MCP browser tools (accessibility tree snapshots — no raw HTML), then generates
-page objects and spec files directly. No manifest is used; existing POMs are discovered
-from the filesystem via Glob.
+Spec-driven Playwright test generation. Reads a `docs/specs/*.md` file, clarifies ambiguities in one round-trip, explores the live app via MCP browser tools, then generates page objects and spec files. One spec at a time; no manifest — existing POMs discovered via Glob.
 
 ---
 
 ## Step 0 — Resolve target spec
 
-### 0a. Determine which spec file to process (in priority order)
+**Source (priority order):**
+1. Explicit argument → `Read` to validate; if missing stop, Glob `docs/specs/**/*.md` and list matches.
+2. Last `ide_opened_file` tag this turn, only if under `docs/specs/` → tell user "Using active file: …"
+3. Neither → stop, ask user to open a spec or pass path explicitly.
 
-1. **Explicit argument** — user typed `/generate-tests docs/specs/foo.md` → use that path.
-   **Immediately validate:** attempt `Read → <path>`. If the file does not exist, stop, tell the user the path was not found, Glob `docs/specs/**/*.md` and list matches. Do not proceed further.
-
-2. **IDE active file** — no argument given. Scan `ide_opened_file` tags in the
-   **current turn only**. If multiple tags are present, use the **last one** — it
-   is the most recently focused file. Only proceed if that file is under `docs/specs/`.
-   If the last open file is not a spec file, ignore all IDE tags and fall through to (3).
-   → Tell the user: "Using active file: docs/specs/admin/foo.md"
-
-3. **No argument, no open spec file** — stop and tell the user to either open a `docs/specs/*.md` file in their IDE and re-run, or pass the path explicitly. Do not proceed further.
-
-### 0b. Prior generation check (filesystem only, no manifest)
-
-Derive the output spec path from the spec file path:
+**Output path** mirrors docs/ under tests/specs/ (`.md` → `.spec.ts`):
 ```
-docs/specs/foo.md           → tests/specs/foo.spec.ts
-docs/specs/admin/foo.md     → tests/specs/admin/foo.spec.ts
-docs/specs/public/foo.md    → tests/specs/public/foo.spec.ts
+docs/specs/foo.md        → tests/specs/foo.spec.ts        importPrefix='..'
+docs/specs/admin/foo.md  → tests/specs/admin/foo.spec.ts  importPrefix='../..'
+docs/specs/public/foo.md → tests/specs/public/foo.spec.ts importPrefix='../..'
 ```
-
-- **Output spec file exists on disk** → tell the user "Already generated. Regenerate?" and wait.
-- **Output spec file does not exist** → proceed to Step 1 immediately.
+If the output `.spec.ts` already exists → ask "Already generated. Regenerate?" and wait.
 
 ---
 
 ## Step 1 — Parallel reads
 
-Fire all reads simultaneously — do not read sequentially.
-If the spec file was already read and validated in Step 0a (explicit argument path), reuse
-that content — do not read it again:
-
+Fire all reads simultaneously:
 ```
-Read  → docs/specs/<target spec file>   (skip if already read in Step 0a)
-Read  → docs/pom-templates.md           (base classes, import paths, templates, known routes)
+Read  → docs/specs/<target>          (skip if already read in Step 0)
+Read  → docs/pom-templates.md
 Glob  → tests/pages/admin/*.ts
 Glob  → tests/pages/public/*.ts
-Glob  → tests/pages/admin/components/*.ts   (if exists)
-Read  → envs/.env  (extract BASE_URL + credentials)
+Glob  → tests/pages/admin/components/*.ts
+Read  → envs/.env                    (extract BASE_URL + credentials)
 ```
 
-Parse the spec file:
+**Parse the spec:**
+- `role: admin | buyer | public` (default: `admin`) → determines auth, base class, output folder
+- `url:` optional for nopCommerce; required for any other app or unlisted page
+- Lines starting with `-` = test cases; `# Heading` = `test.describe` name (fallback: filename)
 
-**Required fields:**
-1. `role: admin | buyer | public` — determines auth context, base class, and output folder
-2. At least one bullet line (`- description`) — each bullet becomes one `test()`
-
-**`url:` — required for non-nopCommerce sites, optional for nopCommerce:**
-- Provide the base path for the feature: `url: /orders`
-- The skill appends sub-paths from bullet text: `/orders/new`, `/orders/:id`, etc.
-- When absent, the skill falls back to the nopCommerce known routes table + `/Admin/{Entity}/{Action}` convention
-- Always provide `url:` when working on a non-nopCommerce app, or any page not in the known routes table
-
-Optional elements:
-- Frontmatter block (`---`) — just a wrapper, not required
-- `# Heading` — used as `test.describe` name; falls back to filename if absent
-- `name:`, `description:` in frontmatter — metadata only, not used during generation
-
-All formats are accepted — `role:` and `url:` can appear anywhere (frontmatter or plain). Example:
-
-```
-role: admin
-url: /orders
-- Admin can view the order list — list loads
-- Admin can create an order — saved and redirected to list
-```
-
-`role:` maps to authState and pomDir:
-- `role: admin`  → authState=admin,  pomDir=tests/pages/admin
-- `role: buyer`  → authState=buyer,  pomDir=tests/pages/public
-- `role: public` → authState=guest,  pomDir=tests/pages/public
-
-Default role is `admin` if not specified.
-
-Extract all lines starting with `-` as test cases.
-
-
-Derive output paths (mirror docs/ structure under tests/specs/):
-```
-docs/specs/foo.md            → tests/specs/foo.spec.ts          importPrefix='..'
-docs/specs/public/bar.md     → tests/specs/public/bar.spec.ts   importPrefix='../..'
-docs/specs/admin/baz.md      → tests/specs/admin/baz.spec.ts    importPrefix='../..'
-```
+| role | authState | pomDir |
+|---|---|---|
+| admin | admin | tests/pages/admin |
+| buyer | buyer | tests/pages/public |
+| public | guest | tests/pages/public |
 
 ---
 
 ## Step 2 — Confirm & Clarify (one round-trip maximum)
 
-Using the POM Globs from Step 1, identify files that would be overwritten.
+Identify POM files that would be overwritten (from Step 1 Globs).
 
-Check every test case for ambiguity:
-- Vague action ("manage", "handle") — what exact steps?
-- Missing assertion — redirect / toast / record appears / count changes?
-- Conditional logic ("if X exists") — skip gracefully or assert present?
-- Auth state — anonymous guest or logged-in user?
-- AJAX vs navigation — does the action change page URL or fire a background request?
-- Components — should they go in a sub-folder (e.g. admin/components/)?
+Flag ambiguities: vague actions ("manage", "handle"), missing assertion, conditional logic, auth state, AJAX vs navigation, component sub-folders.
 
-**If nothing to overwrite AND everything clear** → skip this step entirely.
-
-**Otherwise** → ask everything in ONE message (max 4 questions).
-Include the overwrite choice as one question. Wait for one reply, then proceed.
-Never ask follow-up questions unless an answer introduces a genuinely new ambiguity.
+**If nothing to overwrite AND no ambiguities** → skip entirely.
+**Otherwise** → ask everything in ONE message (max 4 questions), wait for one reply, then proceed.
 
 ---
 
 ## Step 3 — Resolve pages
 
-From the clarified test cases, determine which pages need MCP exploration.
+Map each test case to a URL using this priority:
+1. `url:` field → derive sub-paths from bullet text (`/List`, `/Create`, `/Edit/{id}`)
+2. Known routes in `docs/pom-templates.md § Known routes`
+3. Convention: `/Admin/{Entity}/{Action}` for unlisted admin pages
 
-**URL resolution — in priority order:**
-1. `url:` field in the spec → use as base path, derive sub-pages from bullet text
-   - "view list" → `{url}/List` or `{url}`
-   - "create" → `{url}/Create` or `{url}/new`
-   - "edit" → `{url}/Edit/{id}` or `{url}/:id/edit`
-2. Known project routes (see `docs/pom-templates.md` § Known routes)
-3. App URL convention for anything not in the table (see `docs/pom-templates.md`)
-
-If `url:` is absent and the route cannot be inferred — include it as a clarification question in Step 2.
-
-Deduplicate — if multiple test cases or components share the same URL, explore it once
-and extract all relevant elements in one snapshot session.
-
-Build the pages list with POM output paths for each page and any component sub-files. **All pages are always explored and regenerated.**
-
-Only one spec is processed at a time, so there are no cross-spec POM ownership
-conflicts. Every page in this spec gets a fresh MCP snapshot and a regenerated `_*.ts`
-file. The manual `*.ts` extension file is still protected by Step 5b (write only if
-the file does not already exist on disk).
+Deduplicate — explore each unique URL once. If `url:` is absent and route cannot be inferred, add it as a clarification in Step 2.
 
 ---
 
 ## Step 4 — MCP exploration
 
-Use `browser_snapshot` for all page inspection — never request raw HTML.
-The snapshot returns an accessibility tree: roles, labels, interactive elements.
-Credentials are already loaded from Step 1 — do not re-read `.env`.
-Only snapshot elements relevant to the test cases — do not expand tabs or accordions
-unless a test case explicitly requires that section.
+Use `browser_snapshot` (accessibility tree) — never raw HTML. Load core browser tools (navigate, snapshot, fill, click) in one `ToolSearch` call before starting.
 
-**Before starting:** load the core browser tools (navigate, snapshot, type, click) in a single ToolSearch call. Load additional tools (evaluate, wait_for, network_request) only if a specific test case requires them — do not speculate upfront.
+**Before exploring error states:** grep existing `_*.ts` POMs for known error patterns. Reuse if found; only trigger errors via browser when the locator genuinely cannot be inferred.
 
-**Before exploring error states:** grep existing `_*.ts` POMs for known project patterns (`.message-error`, `.field-validation-error`, etc.). If found, reuse the pattern and mark as uncertain rather than reproducing the error in the browser. Only submit forms via MCP when the error locator genuinely cannot be inferred from existing code.
+**Filling forms:** use `browser_fill_form` (one call) not per-field `browser_type`.
 
-**Filling forms:** use `browser_fill_form` (one call) instead of one `browser_type` per field.
-
-### 4a. Authenticate (once, only when needed)
-
-Navigate to `BASE_URL/login`, fill Email and Password fields, click submit. Skip for `authState=guest`.
-Verify by URL after submit: changed away from `/login` = success; still `/login` = wrong credentials — retry with admin role once (don't try alternative selectors).
+### 4a. Authenticate (once, skip for guest)
+Navigate to `BASE_URL/login`, fill credentials, submit. Verify URL changed away from `/login`. If still on `/login`, retry with admin credentials once.
 
 ### 4b. Navigate and snapshot each unique URL
 
-```
-browser_navigate  → BASE_URL + <page path>
-browser_snapshot  → target: 'main'
-```
+Snapshot the minimum region that covers the test cases:
 
-**Always scope snapshots to `target: 'main'`** — the header and footer are identical on every page and add no locator value. Only take a full-page snapshot (omit `target`) when you specifically need to inspect header elements such as cart count, wishlist count, or login state.
+| Test case signals | Snapshot target |
+|---|---|
+| create / edit / fill / submit / save | `main form` |
+| view list / search / filter / sort / delete | `main` (table region) |
+| cart count / wishlist / header / nav | full page (no target) |
+| dialog / modal / confirm | trigger first, then `[role="dialog"]` |
+| mixed | `main` |
 
-For pages that generate multiple component POMs (e.g. /Admin → Dashboard + LeftMenu + TopMenu):
-- Take ONE snapshot of the page (full-page, since you need header/nav)
-- Extract elements for ALL components from that single snapshot
-- No need to navigate again for each component
+First navigation: take a full-page snapshot to identify the content region, then use that region as `target` for all remaining snapshots. Fall back to full-page only when a test case explicitly needs outside that region.
 
-### 4c. Explore dynamic content (only when test cases require it)
+For pages generating multiple component POMs: one full-page snapshot, extract all component elements from it — no re-navigation.
 
-- **Tabs / accordions / panels** → expand only if a test case explicitly touches that section
-- **Data tables** → note column headers + row action buttons
-- **After any AJAX button click** (Add to cart, Add to wishlist, Remove, Search, Delete) — always wait for the network response **before** navigating away or taking a snapshot. Do not click and immediately navigate; the DOM update may not have completed.
-
-  Confirm the action succeeded by checking one of:
-  - A count changed in the header (e.g. wishlist qty went from 0 to 1)
-  - A row appeared or disappeared in a table
-  - A success notification appeared
-
-  If the change is not visible within a snapshot taken immediately after the click, use `browser_evaluate` to trigger the action via the page's own JS (e.g. `AjaxCart.addproducttocart_catalog(...)`) and wait before navigating.
+### 4c. Dynamic content
+- Expand tabs/accordions only if a test case explicitly touches that section.
+- After AJAX clicks (Add to cart, Search, Delete): wait for network response before navigating. Confirm via count change, row change, or success notification. Use `browser_evaluate` if the DOM update isn't visible in an immediate snapshot.
 
 ### 4d. Selector priority
 1. `page.getByRole('button', { name: 'Save' })`
-2. `page.getByLabel('Product name')`
-3. `page.getByPlaceholder('Search...')`
+2. `page.getByLabel('Email')`
+3. `page.getByPlaceholder('Search…')`
 4. `page.locator('#elementId')`
 5. `page.locator('[data-attribute]')`
-✗ Never use CSS class selectors (`.k-button-abc123`)
-
-Flag uncertain=true for any selector that may not be stable.
+✗ Never CSS class selectors. Flag uncertain selectors with `uncertain=true`.
 
 ---
 
 ## Step 5 — Write page object files
 
-Use `docs/pom-templates.md` for exact TypeScript structure, base class names, and import paths.
+Follow `docs/pom-templates.md` for TypeScript structure, base class names, and import paths.
 
-Each POM is two files:
+**`_<Name>.ts` — always overwrite.** Locator declarations only; extends the role's base class.
+**`<Name>.ts` — write only if not on disk.** Contains `navigate()` and action methods; never overwrite.
 
-**`_<Name>.ts` — always overwrite.** Locator declarations only, no methods. Extends the base class for its role (see `docs/pom-templates.md`).
-
-**`<Name>.ts` — write only if not on disk.** Contains `navigate()` and action methods. Never overwrite — manually maintained after first creation.
-
-**Wait strategy:**
-
-| What happens | Use |
+Wait strategy:
+| Outcome | Use |
 |---|---|
-| URL changes (save, redirect) | `waitForNavigation({ waitUntil: 'domcontentloaded' })` |
-| URL stays (AJAX, grid refresh) | `waitForResponse(resp => resp.url().includes('...'))` |
+| URL changes | `waitForNavigation({ waitUntil: 'domcontentloaded' })` |
+| URL stays (AJAX) | `waitForResponse(resp => resp.url().includes('…'))` |
 | Uncertain | `waitForResponse` — safe either way |
 
-Rules:
-- All locators `readonly` in the base only; all methods in the extension only
-- No default exports, no CSS class selectors
-- Create parent directories as needed
-- On regeneration: overwrite `_<Name>.ts`, skip `<Name>.ts`
+Rules: all locators `readonly` in base only; all methods in extension only; no default exports; create parent directories as needed.
+
+---
+
+## Step 5b — Detect and generate data factories
+
+Scan bullets for write actions: `create`, `submit`, `fill`, `register`, `add`, `place`, `post`, `send`, `update`, `edit`.
+Skip read-only actions: `view`, `search`, `filter`, `sort`, `navigate`, `see`, `open`.
+Skip cart/wishlist "add" actions — no factory needed, they use existing products.
+
+For each write action, infer entity from the bullet noun (`order`, `user`, `product`, `contact`, `review`, etc.).
+
+**For each entity:**
+1. `Glob → utils/factories/{entity}.factory.ts` — if exists, reuse, skip to step 3.
+2. Generate using form fields discovered in Step 4. Map each field label to a faker call using the table in `docs/pom-templates.md § Faker field-mapping table`. Write to `utils/factories/{entity}.factory.ts`.
+3. Add a re-export line to `tests/fixtures/index.ts` under the `// Factory re-exports` comment (skip if already present):
+   ```ts
+   export { fake{Entity} } from '../../utils/factories/{entity}.factory';
+   ```
+4. Record `{ entity → fake{Entity} }` for Step 6 — no separate import path needed.
 
 ---
 
 ## Step 6 — Write spec file
 
-Output path mirrors the docs/ subfolder:
-```
-docs/specs/admin/foo.md  →  tests/specs/admin/foo.spec.ts
-```
-
-Use `docs/pom-templates.md` for the spec structure, fixture names, import depth, and storageState pattern.
+Output path: `docs/specs/admin/foo.md → tests/specs/admin/foo.spec.ts` (see Step 0).
+Follow `docs/pom-templates.md` for spec structure, fixture names, and storageState pattern.
 
 Rules:
 - Import `test` and `expect` from fixtures, never from `@playwright/test`
@@ -247,8 +162,14 @@ Rules:
 - For conditional: `if (count === 0) { test.skip(); }`
 - Create parent directory if needed
 
+**Factory usage:** Factories are re-exported from `tests/fixtures/index.ts`, so no separate import is needed — add factory names to the existing fixtures import:
+```ts
+import { test, expect, fakeUser } from '../../fixtures';
+```
+Inside each write test call the factory at the top: `const data = fake{Entity}()`, then use `data.fieldName` instead of inline string literals. Intentionally invalid values (wrong password, bad email, missing field) stay hardcoded — do not use factories for negative test data. Call the factory once per test, not once at describe level.
+
 ---
 
 ## Step 7 — Report
 
-Output a brief summary: source spec path, each generated POM (`✓` new / `~` overwritten), the spec file, any selectors flagged uncertain with a reason, and the `npx playwright test <path>` run command.
+List: source spec, each POM (`✓` new / `~` overwritten), each factory (`✓` new / `→` reused), the spec file, uncertain selectors with reasons, and the `npx playwright test <path>` run command.

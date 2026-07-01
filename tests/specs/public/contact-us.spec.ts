@@ -1,5 +1,6 @@
 import { test, expect } from '../../fixtures';
 import { ContactUsPage } from '../../pages/public/ContactUsPage';
+import { getCredentials } from '../../fixtures/role-config';
 
 // Override project-level storageState — guest tests need no auth, registered-user test logs in manually
 test.use({ storageState: { cookies: [], origins: [] } });
@@ -58,7 +59,7 @@ test.describe('Contact Us', () => {
 
   test('registered user sees name and email pre-filled on the contact form', async ({ page }) => {
     const contactPage = new ContactUsPage(page);
-    await contactPage.login(process.env.BUYER_USERNAME, process.env.BUYER_PASSWORD);
+    await contactPage.login(getCredentials('buyer').username, getCredentials('buyer').password);
     await contactPage.navigate();
     await expect(contactPage.nameInput).not.toHaveValue('');
     await expect(contactPage.emailInput).not.toHaveValue('');

@@ -131,6 +131,44 @@ Convention for unlisted pages: `/Admin/{Entity}/{Action}` (e.g. `/Admin/Discount
 
 ---
 
+## Faker field-mapping table (Step 5b)
+
+Used by `/generate-tests` to map form field labels to faker calls when auto-generating factories.
+
+| Field signal (label / placeholder / name) | Faker call |
+|---|---|
+| first name | `faker.person.firstName()` |
+| last name | `faker.person.lastName()` |
+| full name, name | `faker.person.fullName()` |
+| email | `` faker.internet.email({ provider: `${Date.now()}.test` }) `` |
+| phone, mobile | `faker.phone.number()` |
+| password | `'Password123!'` — static, must meet site rules |
+| price, amount, cost | `parseFloat(faker.commerce.price({ min: 10, max: 500 }))` |
+| product name, title | `faker.commerce.productName()` |
+| sku, code, reference | `` `REF-${faker.string.alphanumeric(8).toUpperCase()}` `` |
+| description, notes, message, enquiry, body, text | `faker.lorem.sentences(2)` |
+| status, state (dropdown) | `faker.helpers.arrayElement([...observed options])` |
+| quantity, count | `faker.number.int({ min: 1, max: 10 })` |
+| date | `faker.date.future().toISOString().split('T')[0]` |
+| url, website | `faker.internet.url()` |
+| company, organisation | `faker.company.name()` |
+| city | `faker.location.city()` |
+| address, street | `faker.location.streetAddress()` |
+| zip, postal code | `faker.location.zipCode()` |
+| country | `faker.location.country()` |
+| any other text field | `faker.lorem.word()` |
+
+Factory template:
+```ts
+import { faker } from '@faker-js/faker';
+
+export const fake{Entity} = () => ({
+  // one property per discovered form field
+});
+```
+
+---
+
 ## Project-specific wait notes
 
 - **`waitForNetworkIdle()` — do not call in action methods.** This app has persistent

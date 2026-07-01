@@ -7,7 +7,13 @@
       "mcp__playwright__browser_evaluate",
       "mcp__playwright__browser_type",
       "Bash(npx tsc *)",
-      "mcp__playwright__browser_fill_form"
+      "mcp__playwright__browser_fill_form",
+      "mcp__ide__getDiagnostics",
+      "Bash(node -e \"require\\('@playwright/test'\\)\")",
+      "Bash(node -e \"const m = require.resolve.paths\\('@playwright/test'\\); console.log\\(m\\)\")",
+      "Bash(node -e \"const p = require\\('@playwright/test'\\); console.log\\(typeof p\\)\")",
+      "Bash(node \"C:\\\\Users\\\\xufu2\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\D--dev-jun-playwrighte2e\\\\98389f78-db69-4272-a0b6-d6901d87a901\\\\scratchpad\\\\snapshot-currencies.js\")",
+      "Bash(node \"C:\\\\Users\\\\xufu2\\\\AppData\\\\Local\\\\Temp\\\\claude\\\\D--dev-jun-playwrighte2e\\\\98389f78-db69-4272-a0b6-d6901d87a901\\\\scratchpad\\\\snapshot-currencies3.js\")"
     ]
   }
 }

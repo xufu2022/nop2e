@@ -1,6 +1,7 @@
 import { test, expect } from '../../fixtures';
 import { ProductPage } from '../../pages/public/ProductPage';
 import { routes } from '../../fixtures/routes';
+import { getCredentials } from '../../fixtures/role-config';
 
 // Override project-level storageState — guest and buyer tests both start unauthenticated
 test.use({ storageState: { cookies: [], origins: [] } });
@@ -28,7 +29,7 @@ test.describe('Product Reviews', () => {
 
   test('registered user can submit a review with a title, text, and star rating', async ({ page }) => {
     const productPage = new ProductPage(page);
-    await productPage.login(process.env.BUYER_USERNAME, process.env.BUYER_PASSWORD);
+    await productPage.login(getCredentials('buyer').username, getCredentials('buyer').password);
     await productPage.navigate(routes.public.productWithReviews);
     await productPage.reviewTitleInput.fill('Great phone');
     await productPage.reviewTextInput.fill('Excellent camera quality and great build. Highly recommended.');
@@ -39,7 +40,7 @@ test.describe('Product Reviews', () => {
 
   test('registered user cannot submit a review with missing title', async ({ page }) => {
     const productPage = new ProductPage(page);
-    await productPage.login(process.env.BUYER_USERNAME, process.env.BUYER_PASSWORD);
+    await productPage.login(getCredentials('buyer').username, getCredentials('buyer').password);
     await productPage.navigate(routes.public.productWithReviews);
     await productPage.reviewTextInput.fill('Good product overall, very happy with the purchase.');
     await productPage.submitReviewButton.click();
